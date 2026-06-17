@@ -27,7 +27,6 @@ export default function MobileAppLayout() {
   const [selectedItemId, setSelectedItemId] = useState<number | null>(null);
   const [activeCategory, setActiveCategory] = useState<'all' | 'press' | 'media' | 'news' | 'schedule'>('all');
   const [searchQuery, setSearchQuery] = useState('');
-  const [imageError, setImageError] = useState(false);
   const [showGreeting, setShowGreeting] = useState(false);
 
   // Handle deep-linking on mount
@@ -93,7 +92,7 @@ export default function MobileAppLayout() {
     return matchesCategory && matchesSearch;
   });
 
-  const latestNews = mockData.filter(item => item.category !== 'schedule').slice(0, 2);
+  const latestNews = mockData.filter(item => item.category !== 'schedule').slice(0, 3);
 
   // Announcement Rolling Ticker state
   const [noticeIndex, setNoticeIndex] = useState(0);
@@ -256,30 +255,6 @@ export default function MobileAppLayout() {
               </div>
             </div>
 
-            {/* Quick Welcome Banner with Photo */}
-            <div 
-              onClick={() => setShowGreeting(true)}
-              className="bg-white border border-slate-100 rounded-2xl p-4 shadow-sm flex items-center gap-4 cursor-pointer active:scale-98 transition"
-            >
-              <div className="h-14 w-14 rounded-full overflow-hidden shrink-0 border border-slate-200">
-                {!imageError ? (
-                  <img 
-                    src="/images/candidate.png" 
-                    alt="정명희 당선인" 
-                    className="h-full w-full object-cover object-top"
-                    onError={() => setImageError(true)}
-                  />
-                ) : (
-                  <div className="h-full w-full bg-slate-100 flex items-center justify-center text-slate-400 font-bold text-xs">정명희</div>
-                )}
-              </div>
-              <div className="flex-1 min-w-0">
-                <span className="block text-xs text-slate-400 font-bold">인사말씀</span>
-                <p className="text-xs font-bold text-slate-700 leading-relaxed mt-0.5 line-clamp-2" style={{ fontFamily: '"Nanum Pen Script", cursive', fontSize: '1.4em' }}>
-                  "언제나 현장에서 구민과 함께 호흡하는 자랑스러운 북구 시대를 열겠습니다."
-                </p>
-              </div>
-            </div>
           </div>
         )}
 
