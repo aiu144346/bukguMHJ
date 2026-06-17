@@ -92,14 +92,19 @@ export default function MobileAppLayout() {
   const selectedItem = mockData.find((item) => item.id === selectedItemId);
 
   // Filtered news for News Tab
-  const filteredNews = mockData.filter((item) => {
-    const matchesCategory = activeCategory === 'all' || item.category === activeCategory;
-    const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
-                          item.excerpt.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
+  const filteredNews = mockData
+    .filter((item) => {
+      const matchesCategory = activeCategory === 'all' || item.category === activeCategory;
+      const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                            item.excerpt.toLowerCase().includes(searchQuery.toLowerCase());
+      return matchesCategory && matchesSearch;
+    })
+    .sort((a, b) => b.date.localeCompare(a.date));
 
-  const latestNews = mockData.filter(item => item.category !== 'schedule').slice(0, 5);
+  const latestNews = [...mockData]
+    .filter(item => item.category !== 'schedule')
+    .sort((a, b) => b.date.localeCompare(a.date))
+    .slice(0, 5);
 
   // Announcement Rolling Ticker state
   const [noticeIndex, setNoticeIndex] = useState(0);

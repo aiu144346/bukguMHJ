@@ -172,12 +172,14 @@ export default function ActivityBoard() {
   ];
 
   // Filtering
-  const filteredData = mockData.filter((item) => {
-    const matchesTab = activeTab === 'all' || item.category === activeTab;
-    const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
-                          item.excerpt.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesTab && matchesSearch;
-  });
+  const filteredData = mockData
+    .filter((item) => {
+      const matchesTab = activeTab === 'all' || item.category === activeTab;
+      const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                            item.excerpt.toLowerCase().includes(searchQuery.toLowerCase());
+      return matchesTab && matchesSearch;
+    })
+    .sort((a, b) => b.date.localeCompare(a.date));
 
   return (
     <section id="activities" className="py-20 sm:py-28">
