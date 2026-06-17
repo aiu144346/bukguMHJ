@@ -92,7 +92,7 @@ export default function MobileAppLayout() {
     return matchesCategory && matchesSearch;
   });
 
-  const latestNews = mockData.filter(item => item.category !== 'schedule').slice(0, 3);
+  const latestNews = mockData.filter(item => item.category !== 'schedule').slice(0, 5);
 
   // Announcement Rolling Ticker state
   const [noticeIndex, setNoticeIndex] = useState(0);
@@ -255,6 +255,25 @@ export default function MobileAppLayout() {
               </div>
             </div>
 
+            {/* Quick Welcome Banner with Photo */}
+            <div 
+              onClick={() => setShowGreeting(true)}
+              className="bg-white border border-slate-100 rounded-2xl p-4 shadow-sm flex items-center gap-4 cursor-pointer active:scale-98 transition mt-5"
+            >
+              <div className="h-14 w-14 rounded-full overflow-hidden shrink-0 border border-slate-200">
+                <img 
+                  src="/images/candidate.png" 
+                  alt="정명희 당선인" 
+                  className="h-full w-full object-cover object-top"
+                />
+              </div>
+              <div className="flex-1 min-w-0">
+                <span className="block text-xs text-slate-400 font-bold">인사말씀</span>
+                <p className="text-xs font-bold text-slate-700 leading-relaxed mt-0.5 line-clamp-2" style={{ fontFamily: '"Nanum Pen Script", cursive', fontSize: '1.4em' }}>
+                  "언제나 현장에서 구민과 함께 호흡하는 자랑스러운 북구 시대를 열겠습니다."
+                </p>
+              </div>
+            </div>
           </div>
         )}
 
