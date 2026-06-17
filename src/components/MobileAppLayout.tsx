@@ -28,6 +28,7 @@ export default function MobileAppLayout() {
   const [activeCategory, setActiveCategory] = useState<'all' | 'press' | 'media' | 'news' | 'schedule'>('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [imageError, setImageError] = useState(false);
+  const [showGreeting, setShowGreeting] = useState(false);
 
   // Handle deep-linking on mount
   useEffect(() => {
@@ -256,7 +257,10 @@ export default function MobileAppLayout() {
             </div>
 
             {/* Quick Welcome Banner with Photo */}
-            <div className="bg-white border border-slate-100 rounded-2xl p-4 shadow-sm flex items-center gap-4">
+            <div 
+              onClick={() => setShowGreeting(true)}
+              className="bg-white border border-slate-100 rounded-2xl p-4 shadow-sm flex items-center gap-4 cursor-pointer active:scale-98 transition"
+            >
               <div className="h-14 w-14 rounded-full overflow-hidden shrink-0 border border-slate-200">
                 {!imageError ? (
                   <img 
@@ -628,6 +632,63 @@ export default function MobileAppLayout() {
                   )}
                 </div>
               )}
+            </div>
+          </div>
+        </>
+      )}
+      {/* Bottom Sheet Drawer for Greeting */}
+      {showGreeting && (
+        <>
+          {/* Backdrop overlay */}
+          <div 
+            className="fixed inset-0 z-50 bg-slate-950/40 backdrop-blur-sm transition-opacity"
+            onClick={() => setShowGreeting(false)}
+          />
+
+          {/* Bottom Sheet Drawer */}
+          <div className="fixed bottom-0 left-0 right-0 z-50 max-h-[90vh] bg-white rounded-t-[32px] shadow-[0_-12px_36px_rgba(0,0,0,0.12)] flex flex-col transform transition-transform duration-300 translate-y-0 ease-out">
+            {/* Grab Bar Header */}
+            <div 
+              className="flex-shrink-0 cursor-pointer"
+              onClick={() => setShowGreeting(false)}
+            >
+              <div className="h-1.5 w-12 bg-slate-200 rounded-full mx-auto my-3.5" />
+              <div className="flex items-center justify-between px-5 pb-2">
+                <span className="text-xs text-[#1E3A8A] font-extrabold flex items-center gap-1">
+                  당선인 인사말씀
+                </span>
+                <button 
+                  onClick={() => setShowGreeting(false)}
+                  className="p-1 rounded-full hover:bg-slate-100 text-slate-400 hover:text-slate-600 transition"
+                >
+                  <X className="h-5 w-5" />
+                </button>
+              </div>
+            </div>
+
+            {/* Scrollable Content wrapper */}
+            <div className="flex-grow overflow-y-auto px-6 pb-12 space-y-6 text-slate-700 leading-relaxed text-sm sm:text-base">
+              <div className="text-center pb-4 border-b border-slate-100">
+                <div className="h-20 w-20 rounded-full overflow-hidden mx-auto border-2 border-blue-100 mb-3">
+                  <img src="/images/candidate.png" alt="정명희 당선인" className="w-full h-full object-cover object-top" />
+                </div>
+                <h3 className="text-lg font-black text-slate-900">정명희 부산 북구청장 당선인</h3>
+                <p className="text-xs text-blue-800 font-bold mt-1">"내 삶이 힘이 되는 북구"</p>
+              </div>
+
+              <div className="space-y-4">
+                <p className="font-extrabold text-base text-[#0B1E43] leading-relaxed">
+                  존경하고 사랑하는 부산 북구 주민 여러분, 안녕하십니까!<br />
+                  북구청장 당선인 정명희입니다.
+                </p>
+                <p>
+                  주민 여러분께서 보내주신 뜨거운 신뢰와 변화를 향한 열망에 깊이 머리 숙여 감사드립니다. 
+                  낙동강의 유려한 역사와 구포나루의 상생 정신을 이어받아, 우리 북구를 주민이 주인 되는 따뜻하고 활기찬 도시로 재창조하겠습니다.
+                </p>
+                <p>
+                  '북구의 새로운 문을 여는 인수위원회' 활동 기간 동안 구민 한 분 한 분의 목소리를 경청하며, 약속드린 공약들을 면밀하고 투명하게 다듬겠습니다. 언제나 초심을 잃지 않고 소통하며 혁신하는 구정을 이끌어 가겠습니다.
+                </p>
+              </div>
             </div>
           </div>
         </>
