@@ -86,6 +86,16 @@ export const mockData: BoardItem[] = [
     linkUrl: 'https://localsegye.co.kr/news/view/1065599939029304'
   },
   {
+    id: 17,
+    category: 'news',
+    title: '정명희 북구청장 당선인 인수위, “행정 관성 타파하고 ‘북(Book)구’로 재도약하라”',
+    date: '2026-06-17',
+    excerpt: '인수위 4일 차, 문화교육국 등 5개 부서 업무보고… “현장 목소리 외면한 정책 지양”\n당선인, “덕천 젊음의 거리 ‘차 없는 거리’ 민원 해결 등 현장 중심 행정 강력 주문”',
+    badge: '업무 보고',
+    imageUrl: '/images/insu_meeting_day4_1.jpg',
+    linkUrl: '/news/insu-report-day4'
+  },
+  {
     id: 11,
     category: 'news',
     title: '정명희 북구청장 당선인 인수위, ‘촘촘한 복지·보건 안전망’ 구축 박차',

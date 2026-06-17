@@ -22,18 +22,18 @@ export default function Greeting() {
     <section id="greeting" className="relative overflow-hidden bg-white py-16 sm:py-24">
       {/* Background patterns */}
       <div className="absolute inset-0 bg-gradient-to-b from-blue-50/50 to-white pointer-events-none" />
-      
+
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-center">
-          
+
           {/* Left: Greeting and Slogans */}
           <div className="lg:col-span-7 space-y-7 text-center lg:text-left">
             <span className="inline-flex items-center gap-1.5 rounded-full bg-blue-50 px-3.5 py-1 text-sm font-semibold text-[#1E3A8A] border border-blue-100">
               <span className="h-1.5 w-1.5 rounded-full bg-[#1E3A8A] animate-pulse" />
               부산광역시 북구의 힘찬 도약
             </span>
-            
-            <h2 
+
+            <h2
               className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-5xl lg:leading-tight animate-fade-in"
               style={{ fontFamily: '"Gowun Batang", serif' }}
             >
@@ -45,17 +45,15 @@ export default function Greeting() {
             </h2>
 
             {/* Premium Greeting Card Container with Background Image and Slow Floating Effect */}
-            <div className={`relative overflow-hidden rounded-3xl border border-blue-100/60 p-6 sm:p-8 bg-white shadow-xl transition-all duration-[2000ms] ease-out transform ${
-              animateText ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
-            }`}>
+            <div className={`relative overflow-hidden rounded-3xl border border-blue-100/60 p-6 sm:p-8 bg-white shadow-xl transition-all duration-[2000ms] ease-out transform ${animateText ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+              }`}>
               {/* Background image of Buk-gu inside the card */}
               <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-3xl">
-                <img 
-                  src="/images/bukgu_bg.png" 
-                  alt="부산 북구 낙동강 전경" 
-                  className={`w-full h-full object-cover object-center transition-all duration-[4000ms] ease-out transform ${
-                    animateBg ? 'scale-100 opacity-[0.12]' : 'scale-110 opacity-0'
-                  }`}
+                <img
+                  src="/images/bukgu_bg.png"
+                  alt="부산 북구 낙동강 전경"
+                  className={`w-full h-full object-cover object-center transition-all duration-[4000ms] ease-out transform ${animateBg ? 'scale-100 opacity-[0.12]' : 'scale-110 opacity-0'
+                    }`}
                 />
                 <div className="absolute inset-0 bg-gradient-to-br from-white/95 via-white/80 to-white/95" />
               </div>
@@ -67,7 +65,7 @@ export default function Greeting() {
                   북구청장 당선인 <span className="underline decoration-blue-500 decoration-3 underline-offset-4 font-black">정명희</span>입니다.
                 </p>
                 <p className="text-gray-600 font-medium">
-                  주민 여러분께서 보내주신 뜨거운 신뢰와 변화를 향한 열망에 깊이 머리 숙여 감사드립니다. 
+                  주민 여러분께서 보내주신 뜨거운 신뢰와 변화를 향한 열망에 깊이 머리 숙여 감사드립니다.
                   낙동강의 유려한 역사와 구포나루의 상생 정신을 이어받아, 우리 북구를 주민이 주인 되는 따뜻하고 활기찬 도시로 재창조하겠습니다.
                 </p>
                 <p className="text-gray-600 font-medium">
@@ -75,7 +73,7 @@ export default function Greeting() {
                 </p>
               </div>
             </div>
-            
+
             <div className="pt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="rounded-2xl bg-blue-50/50 border border-blue-200/50 p-4.5 flex items-start gap-3.5 transition-all duration-300 hover:bg-blue-50 hover:border-blue-200">
                 <div className="rounded-xl bg-[#1E3A8A] p-2 text-white shadow-md shadow-blue-900/10">
@@ -88,7 +86,7 @@ export default function Greeting() {
                   </strong>
                 </div>
               </div>
-              
+
               <div className="rounded-2xl bg-emerald-50/40 border border-emerald-200/40 p-4.5 flex items-start gap-3.5 transition-all duration-300 hover:bg-emerald-50 hover:border-emerald-200">
                 <div className="rounded-xl bg-emerald-600 p-2 text-white shadow-md shadow-emerald-900/10">
                   <Target className="h-5 w-5" />
@@ -108,24 +106,23 @@ export default function Greeting() {
             <div className="relative w-full max-w-sm sm:max-w-md">
               {/* Outer decorative box */}
               <div className="absolute -inset-2 rounded-2xl bg-gradient-to-tr from-[#1E3A8A] to-blue-400 opacity-20 blur-lg" />
-              
+
               <div className="relative overflow-hidden rounded-2xl border-4 border-white bg-gray-100 shadow-xl aspect-[4/5] flex items-center justify-center">
                 {!imageError ? (
                   <div className="relative w-full h-full group overflow-hidden">
-                    <img 
-                      src="/images/candidate.png" 
-                      alt="정명희 당선인" 
+                    <img
+                      src="/images/candidate.png"
+                      alt="정명희 당선인"
                       className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                       onError={() => setImageError(true)}
                     />
                     {/* Wording Overlay with animations */}
-                    <div className={`absolute inset-x-0 bottom-0 bg-white/95 backdrop-blur-sm p-5 border-t border-gray-200/50 text-left transition-all duration-[2000ms] ease-out transform ${
-                      animateText ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'
-                    }`}>
+                    <div className={`absolute inset-x-0 bottom-0 bg-white/95 backdrop-blur-sm p-5 border-t border-gray-200/50 text-left transition-all duration-[2000ms] ease-out transform ${animateText ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'
+                      }`}>
                       <p className="text-base sm:text-lg font-black text-[#1E3A8A] tracking-wide mb-1.5">
                         정명희 당선인의 약속
                       </p>
-                      <p 
+                      <p
                         className="text-xl sm:text-2xl font-bold text-gray-800 leading-relaxed"
                         style={{ fontFamily: '"Nanum Pen Script", cursive' }}
                       >

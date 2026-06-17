@@ -11,6 +11,8 @@ import Directions from './components/Directions';
 import PressDetail from './components/PressDetail';
 import WelfareHealthDetail from './components/WelfareHealthDetail';
 import MobileAppLayout from './components/MobileAppLayout';
+import NewsDay4Detail from './components/NewsDay4Detail';
+
 
 function VerticalTicker() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -104,6 +106,8 @@ function App() {
             <ArticleDetail />
           ) : path === '/news/insu-welfare-health' ? (
             <WelfareHealthDetail />
+          ) : path === '/news/insu-report-day4' ? (
+            <NewsDay4Detail />
           ) : path === '/privacy' ? (
             <PrivacyPolicy />
           ) : path === '/terms' ? (

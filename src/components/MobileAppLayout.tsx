@@ -21,6 +21,8 @@ import { mockData } from './ActivityBoard';
 import ArticleDetail from './ArticleDetail';
 import WelfareHealthDetail from './WelfareHealthDetail';
 import PressDetail from './PressDetail';
+import NewsDay4Detail from './NewsDay4Detail';
+
 
 export default function MobileAppLayout() {
   const [activeTab, setActiveTab] = useState<'home' | 'news' | 'sns' | 'map'>('home');
@@ -40,6 +42,9 @@ export default function MobileAppLayout() {
     } else if (path === '/news/insu-welfare-health') {
       setActiveTab('news');
       setSelectedItemId(11); // mockData ID for insu-welfare-health
+    } else if (path === '/news/insu-report-day4') {
+      setActiveTab('news');
+      setSelectedItemId(17); // mockData ID for insu-report-day4
     } else if (path === '/press/insu-committee-launch') {
       setActiveTab('news');
       setSelectedItemId(10); // mockData ID for insu-committee-launch
@@ -59,6 +64,8 @@ export default function MobileAppLayout() {
         setSelectedItemId(5);
       } else if (path === '/news/insu-welfare-health') {
         setSelectedItemId(11);
+      } else if (path === '/news/insu-report-day4') {
+        setSelectedItemId(17);
       } else if (path === '/press/insu-committee-launch') {
         setSelectedItemId(10);
       }
@@ -582,6 +589,8 @@ export default function MobileAppLayout() {
                 <ArticleDetail isBottomSheet={true} />
               ) : selectedItem.linkUrl === '/news/insu-welfare-health' ? (
                 <WelfareHealthDetail isBottomSheet={true} />
+              ) : selectedItem.linkUrl === '/news/insu-report-day4' ? (
+                <NewsDay4Detail isBottomSheet={true} />
               ) : selectedItem.linkUrl === '/press/insu-committee-launch' ? (
                 <PressDetail isBottomSheet={true} />
               ) : (
