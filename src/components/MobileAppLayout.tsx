@@ -179,7 +179,7 @@ export default function MobileAppLayout() {
               <div className="absolute right-0 bottom-0 opacity-15 pointer-events-none">
                 <Compass className="h-32 w-32 translate-x-6 translate-y-6" />
               </div>
-              <span className="text-[10px] font-bold tracking-widest text-blue-200 uppercase bg-blue-950/40 px-2.5 py-1 rounded-full border border-blue-800/30">제8대 부산 북구청장 당선인</span>
+              <span className="text-[10px] font-bold tracking-widest text-blue-200 uppercase bg-blue-950/40 px-2.5 py-1 rounded-full border border-blue-800/30">제9대 부산광역시 북구청장 당선인 정명희</span>
               <h2 className="text-xl font-black mt-3 leading-snug" style={{ fontFamily: "'Gowun Batang', serif" }}>
                 "주민과 함께 여는<br />북구의 새로운 내일"
               </h2>
