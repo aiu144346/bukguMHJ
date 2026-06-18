@@ -184,7 +184,7 @@ export default function MobileAppLayout() {
                 "주민과 함께 여는<br />북구의 새로운 내일"
               </h2>
               <p className="text-xs text-blue-100/80 mt-2 font-medium leading-relaxed">
-                구민 한 분 한 분의 목소리를 경청하며 약속드린 공약들을 투명하게 다듬겠습니다. 언제나 초심을 잃지 않겠습니다.
+                구민 한 분 한 분의 목소리를 경청하며, 약속드린 공약들을 면밀하고 투명하게 다듬겠습니다. 언제나 초심을 잃지 않고 소통하며 혁신하는 구정을 이끌어 가겠습니다.
               </p>
               <div className="mt-4 flex gap-4 pt-2 border-t border-white/10 text-[11px] text-blue-200 font-bold">
                 <span className="flex items-center gap-1"><Compass className="h-3.5 w-3.5 text-yellow-400" /> 내 삶이 힘이 되는 북구</span>
