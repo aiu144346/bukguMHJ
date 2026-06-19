@@ -12,6 +12,7 @@ import PressDetail from './components/PressDetail';
 import WelfareHealthDetail from './components/WelfareHealthDetail';
 import MobileAppLayout from './components/MobileAppLayout';
 import NewsDay4Detail from './components/NewsDay4Detail';
+import NewsDay5Detail from './components/NewsDay5Detail';
 
 
 function VerticalTicker() {
@@ -108,6 +109,8 @@ function App() {
             <WelfareHealthDetail />
           ) : path === '/news/insu-report-day4' ? (
             <NewsDay4Detail />
+          ) : path === '/news/insu-report-day5' ? (
+            <NewsDay5Detail />
           ) : path === '/privacy' ? (
             <PrivacyPolicy />
           ) : path === '/terms' ? (

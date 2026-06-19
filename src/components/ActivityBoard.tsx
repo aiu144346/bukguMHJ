@@ -86,6 +86,16 @@ export const mockData: BoardItem[] = [
     linkUrl: 'https://localsegye.co.kr/news/view/1065599939029304'
   },
   {
+    id: 18,
+    category: 'news',
+    title: '정명희 북구청장 당선인 인수위, “지역 경제 살리기 총력… ‘자영업자 심폐소생’으로 민생 체감도 높인다”',
+    date: '2026-06-18',
+    excerpt: '인수위 5일 차, 경제환경국 등 5개 부서 업무보고… “N잡 지원센터 등 공약 사업 속도전”\n당선인, “행정 편의주의 탈피해 고향사랑기부금 활용 등 자영업자 실질 지원책 마련하라”',
+    badge: '업무 보고',
+    imageUrl: '/images/insu_meeting_day5_img1.png',
+    linkUrl: '/news/insu-report-day5'
+  },
+  {
     id: 17,
     category: 'news',
     title: '정명희 북구청장 당선인 인수위, “행정 관성 타파하고 ‘북(Book)구’로 재도약하라”',
