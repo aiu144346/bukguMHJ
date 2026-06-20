@@ -22,3 +22,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Custom exclusions
+login.txt
+firebase-debug.log
+.firebaserc
+firebase.json
+

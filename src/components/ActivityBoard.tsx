@@ -86,6 +86,16 @@ export const mockData: BoardItem[] = [
     linkUrl: 'https://localsegye.co.kr/news/view/1065599939029304'
   },
   {
+    id: 19,
+    category: 'news',
+    title: '정명희 북구청장 당선인 인수위, “안전하고 쾌적한 ‘생활밀착형 도시’ 기반 조성”',
+    date: '2026-06-19',
+    excerpt: '인수위 6일 차, 안전도시국 업무보고… “악취·교통·주차 등 주민 숙원사업 현장 해결사 나선다”\n당선인, “건설 공약의 현실적 이행 독려… 구민 체감형 스마트 도시 인프라 구축” 주문',
+    badge: '업무 보고',
+    imageUrl: '/images/insu_meeting_day6_card.png',
+    linkUrl: '/news/insu-report-day6'
+  },
+  {
     id: 18,
     category: 'news',
     title: '정명희 북구청장 당선인 인수위, “지역 경제 살리기 총력… ‘자영업자 심폐소생’으로 민생 체감도 높인다”',
