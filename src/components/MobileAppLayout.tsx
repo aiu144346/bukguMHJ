@@ -87,8 +87,12 @@ export default function MobileAppLayout() {
   }, []);
 
   const openItemDetails = (id: number) => {
-    setSelectedItemId(id);
     const item = mockData.find(i => i.id === id);
+    if (item && item.linkUrl && !item.linkUrl.startsWith('/')) {
+      window.open(item.linkUrl, '_blank', 'noopener,noreferrer');
+      return;
+    }
+    setSelectedItemId(id);
     // If it's a local route, update history without reload
     if (item && item.linkUrl && item.linkUrl.startsWith('/')) {
       window.history.pushState({}, '', item.linkUrl);

@@ -14,6 +14,76 @@ export interface BoardItem {
 }
 
 export const mockData: BoardItem[] = [
+  {
+    id: 26,
+    category: 'media',
+    title: '정명희 인수위, "북구청 신청사 사업 중단 요구"',
+    date: '2026-06-18',
+    excerpt: '정명희 북구청장 당선인 인수위원회가 현 오태원 구청장이 추진해 온 북구청 신청사 건립 과정의 문제를 제기하며 사업 중단을 요구했다. 인수위는 신청사 부지 용도로 기부받기로 했던 토지에 거액의 근저당권이 설정되어 기부 자체가 무산되었는데도 구청 측이 이를 제대로 알리지 않은 채 사업을 홍보했고, 부동산 투기 정황이 발견되었다고 주장했다.',
+    badge: '언론 보도',
+    imageUrl: 'https://wimg.sedaily.com/news/cms/2026/06/17/news-p.v1.20260617.742587a4921e4019b17a2272c8b0c145_R.jpg',
+    linkUrl: 'https://busanmbc.co.kr/article/BeDCESF_Ka?idx=286321'
+  },
+  {
+    id: 25,
+    category: 'media',
+    title: '정명희 북구청장 당선인 5대 공약, 취임 첫날부터 이행',
+    date: '2026-06-18',
+    excerpt: '민선 9기 정명희 부산 북구청장 당선인의 6‧3지방선거 공약이 취임 첫날인 7월 1일부터 단계적으로 이행된다. 정명희 당선인의 ‘북구의 새로운 문을 여는 인수위원회(위원장 강재화)’는 업무보고를 거쳐 공약 이행을 위한 로드맵을 발표했다.',
+    badge: '언론 보도',
+    imageUrl: 'https://localsegye.co.kr/news/data/2026/06/18/p1065572726286188_218_thum.jpg',
+    linkUrl: 'https://localsegye.co.kr/news/view/1065572726286188'
+  },
+  {
+    id: 24,
+    category: 'media',
+    title: '정명희 북구청장 당선인 “옛 구포개시장, ‘다크투어리즘’ 명소 개발”',
+    date: '2026-06-19',
+    excerpt: '부산 북구의 어두운 역사유산인 옛 ‘구포가축시장(개시장)’을 다크투어리즘(역사교훈여행) 명소로 개발하는 방안이 추진된다. 70년 동안 동물 학대의 상징적 공간이었던 이곳을 생명 존중의 상징이자 역사적 교훈을 전하는 관광 자원으로 재바꿈하겠다는 구상이다.',
+    badge: '언론 보도',
+    imageUrl: 'https://cdn.ingopress.com/news/photo/202606/63314_44917_3439.jpg',
+    linkUrl: 'https://www.ingopress.com/news/articleView.html?idxno=63314'
+  },
+  {
+    id: 23,
+    category: 'media',
+    title: '“신청사 부지 선정 공정했나” 부산 북구청장 인수위, 재검증 착수',
+    date: '2026-06-17',
+    excerpt: '민선 9기 정명희 부산 북구청장 당선인 인수위원회가 북구청 신청사 건립 사업 전반에 대한 진상 규명을 요구하고 나섰다. 부지 선정 과정의 공정성은 물론 자명사 토지 무상 기부 무산 경위, 사유지 보상 과정의 투기 의혹까지 재검증할 계획이다.',
+    badge: '언론 보도',
+    imageUrl: 'https://wimg.sedaily.com/news/cms/2026/06/17/news-p.v1.20260617.742587a4921e4019b17a2272c8b0c145_R.jpg',
+    linkUrl: 'https://www.sedaily.com/article/20056722'
+  },
+  {
+    id: 22,
+    category: 'media',
+    title: '[인터뷰] 정명희 부산북구청장 당선인 "자연·교통 강점에 AI 더해 재도약"',
+    date: '2026-06-18',
+    excerpt: '"주민 삶 세세하게 챙기는 행정 펼칠 것" 생애 전 주기 맞춤형 복지체계 실현. 정명희 당선인은 기존 북구의 강점인 자연환경과 교통 요충지에 인공지능(AI) 등 첨단 산업을 입혀 스마트도시로 재도약시키겠다는 포부를 밝혔습니다.',
+    badge: '언론 보도',
+    imageUrl: 'https://i3n.news1.kr/system/photos/2026/6/18/7965139/high.jpg',
+    linkUrl: 'https://www.news1.kr/local/busan-gyeongnam/6201270'
+  },
+  {
+    id: 21,
+    category: 'media',
+    title: '4년 만 탈환...부산 북구청장 정명희',
+    date: '2026-06-05',
+    excerpt: '정명희 더불어민주당 부산 북구청장 후보가 6·3 지방선거에서 현직 오태원 후보를 꺾고 4년 만에 구청장직을 되찾았다. 부산대 약대를 나온 약사 출신으로, 보건의료 분야 전문성을 행정에 접목해 왔다는 평을 받는다.',
+    badge: '언론 보도',
+    imageUrl: 'https://cdn.womennews.co.kr/news/photo/202606/278404_448936_1217.jpg',
+    linkUrl: 'https://www.womennews.co.kr/news/articleView.html?idxno=278404'
+  },
+  {
+    id: 20,
+    category: 'media',
+    title: '4년 만에 복귀한 정명희 북구청장 당선인, "26만 주민 위해 \'안정과 혁신\' 이끌 것"',
+    date: '2026-06-17',
+    excerpt: '네, 오늘 집중 인터뷰 시작하겠습니다. 6.3 지방선거에서 더불어민주당 정명희 후보가 부산 북구청장에 당선됐습니다. 정 당선인은 민선 7기 북구청장을 지낸 뒤, 다시 4년 만에 주민들의 선택을 받으며 구정에 복귀하게 됐습니다.',
+    badge: '언론 보도',
+    imageUrl: 'https://cdn.news.bbsi.co.kr/news/photo/202606/4089788_739649_3356.jpg',
+    linkUrl: 'https://news.bbsi.co.kr/news/articleView.html?idxno=4089788'
+  },
   // 보도자료 (press)
   {
     id: 10,
