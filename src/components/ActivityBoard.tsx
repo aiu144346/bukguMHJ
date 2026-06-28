@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import { Newspaper, Calendar, Info, Search, ExternalLink, Inbox } from 'lucide-react';
+import { Newspaper, Calendar, Info, Search, ExternalLink, Inbox, ClipboardCheck } from 'lucide-react';
 
 export interface BoardItem {
   id: number;
-  category: 'press' | 'media' | 'news' | 'schedule';
+  category: 'press' | 'media' | 'news' | 'committee' | 'schedule';
   title: string;
   date: string;
   excerpt: string;
@@ -86,8 +86,48 @@ export const mockData: BoardItem[] = [
   },
   // 보도자료 (press)
   {
+    id: 103,
+    category: 'committee',
+    title: '구민참여위원회 위원들의 정책제안 Part III',
+    date: '2026-06-22',
+    excerpt: '민선 9기 부산 북구 구민참여인수위원회 위원들이 제안한 낙동강 국가정원 지정, 고전 인문 교육, 아빠 육아휴직 조례 등 세 번째 생생한 제안 사항들을 카드뉴스로 확인하세요.',
+    badge: '정책 제안',
+    imageUrl: '/images/proposals_part3_thumbnail.png',
+    linkUrl: '/committee/proposals-part3'
+  },
+  {
+    id: 102,
+    category: 'committee',
+    title: '구민참여위원회 위원들의 정책제안 Part II',
+    date: '2026-06-21',
+    excerpt: '민선 9기 부산 북구 구민참여인수위원회 위원들이 제안한 스마트 음향 안전망 구축, 관광 벨트 조성, 지하상가 주차장 연계 등 두 번째 생생한 제안 사항들을 카드뉴스로 공개합니다.',
+    badge: '정책 제안',
+    imageUrl: '/images/proposals_part2_thumbnail.png',
+    linkUrl: '/committee/proposals-part2'
+  },
+  {
+    id: 100,
+    category: 'committee',
+    title: '구민참여위원회 위원들의 정책제안 Part I',
+    date: '2026-06-20',
+    excerpt: '민선 9기 부산 북구 구민참여인수위원회 위원들이 직접 제안한 생활밀착형 정책, 평생학습 활성화, 돌봄 센터 설치 등 생생한 정책 제안 사항들을 카드뉴스로 모아 확인하세요.',
+    badge: '정책 제안',
+    imageUrl: '/images/policy_proposals_thumbnail.png',
+    linkUrl: '/committee/proposals'
+  },
+  {
+    id: 101,
+    category: 'committee',
+    title: '민선 9기 부산 북구 「구민참여인수위원회」 주민 안내 Q&A 총정리',
+    date: '2026-06-19',
+    excerpt: '구민참여인수위원회에 대해 구민 여러분들이 가장 궁금해하시는 신청 자격, 선발 방식, 향후 위원 활동 혜택 및 상세 일정까지 한눈에 알아보기 쉽게 정리하여 드립니다.',
+    badge: 'Q&A 안내',
+    imageUrl: '/images/insu_member_recruit.jpg',
+    linkUrl: '/committee/qa'
+  },
+  {
     id: 10,
-    category: 'press',
+    category: 'committee',
     title: '정명희 부산 북구청장 당선인, 민선 9기 구민참여인수위원회 구성 전격 발표!',
     date: '2026-06-11',
     excerpt: '- 명칭 “북구의 새로운 문을 여는 인수위원회”,\n- 슬로건 “민생에 답하고, 미래를 여는 북구” 확정\n\n- 당선인 제1호 지시로 “구민참여인수위원회” 전격 도입… QR코드로 주민참여인수위원회 직접 선발\n- 개방형 온라인 플랫폼 및 과학적 소통 모형 결합… 관료주의 타파한 파격적 구조',
@@ -97,7 +137,7 @@ export const mockData: BoardItem[] = [
   },
   {
     id: 1,
-    category: 'press',
+    category: 'committee',
     title: '“부산 북구 미래는 주민 손으로” 정명희 구정 인수위, 구민참여인수위원회 구성',
     date: '2026-06-12',
     excerpt: '정책 워크숍·현안 진단 참여… 구민이 직접 구정 방향 제안\n취임 100일 비전 발표회서 ‘4개년 구정 마스터플랜’ 공개 예정',
@@ -127,7 +167,7 @@ export const mockData: BoardItem[] = [
   // 인수위 소식 (news)
   {
     id: 16,
-    category: 'media',
+    category: 'committee',
     title: '부산 북구, 행정의 문을 주민에게 연다',
     date: '2026-06-11',
     excerpt: '"정책은 이제 주민이 만든다." 전국 최초 구민참여인수위 출범\n구민이나 사업자 누구나 참여..4개년 로드맵에 직접 목소리 담는다.\n정명희 당선인 "일방 행정 시대는 끝났다"',
@@ -147,7 +187,7 @@ export const mockData: BoardItem[] = [
   },
   {
     id: 4,
-    category: 'media',
+    category: 'committee',
     title: '정명희 북구청장 당선인 인수위, 전국 첫 ‘구민참여인수위’ 출범…"북구 미래 직접 설계"',
     date: '2026-06-11',
     excerpt: '지방자치단체 인수위 제도 도입 이후 첫 주민 참여형 인수위원회 공개 모집\n북구민·북구 사업자 누구나 신청 가능…정책 제안부터 로드맵 수립 참여\n정책 워크숍·조율회의 통해 민선 9기 핵심 공약과 미래 비전 함께 구상\n정명희 당선인 "일방 행정 넘어 주민이 정책 만드는 구민주권 시대 열겠다"',
@@ -250,7 +290,7 @@ export const mockData: BoardItem[] = [
 ];
 
 export default function ActivityBoard() {
-  const [activeTab, setActiveTab] = useState<'all' | 'press' | 'media' | 'news' | 'schedule'>('all');
+  const [activeTab, setActiveTab] = useState<'all' | 'press' | 'media' | 'news' | 'committee' | 'schedule'>('all');
   const [searchQuery, setSearchQuery] = useState('');
 
   const tabs = [
@@ -258,6 +298,7 @@ export default function ActivityBoard() {
     { id: 'press', label: '보도자료' },
     { id: 'media', label: '언론 보도' },
     { id: 'news', label: '인수위 소식' },
+    { id: 'committee', label: '구민참여인수위원회' },
     { id: 'schedule', label: '활동 일정' }
   ];
 
@@ -289,7 +330,7 @@ export default function ActivityBoard() {
         <div className="mt-12 flex flex-col md:flex-row md:items-center md:justify-between gap-6 bg-white p-4 sm:p-5 rounded-2xl shadow-sm border border-slate-100">
           
           {/* Segmented Control Tab Bar */}
-          <div className="relative bg-slate-100/80 p-1 rounded-2xl flex w-full md:max-w-2xl border border-slate-200/40 shadow-inner">
+          <div className="relative bg-slate-100/80 p-1 rounded-2xl flex w-full md:max-w-3xl border border-slate-200/40 shadow-inner">
             {/* Sliding Background Chip */}
             <div 
               className="absolute top-1 bottom-1 bg-white rounded-xl shadow-md transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]"
@@ -380,12 +421,14 @@ export default function ActivityBoard() {
                         <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs sm:text-sm font-semibold ${
                           item.category === 'press' ? 'bg-blue-50 text-blue-800' :
                           item.category === 'media' ? 'bg-indigo-50 text-indigo-800' :
-                          item.category === 'news' ? 'bg-amber-50 text-amber-800' : 'bg-emerald-50 text-emerald-800'
+                          item.category === 'news' ? 'bg-amber-50 text-amber-800' :
+                          item.category === 'committee' ? 'bg-violet-50 text-violet-800' : 'bg-emerald-50 text-emerald-800'
                         }`}>
                           {(item.category === 'press' || item.category === 'media') && <Newspaper className="h-4 w-4" />}
                           {item.category === 'news' && <Info className="h-4 w-4" />}
+                          {item.category === 'committee' && <ClipboardCheck className="h-4 w-4" />}
                           {item.category === 'schedule' && <Calendar className="h-4 w-4" />}
-                          {item.category === 'press' ? '보도자료' : item.category === 'media' ? '언론 보도' : item.category === 'news' ? '인수위 소식' : '활동 일정'}
+                          {item.category === 'press' ? '보도자료' : item.category === 'media' ? '언론 보도' : item.category === 'news' ? '인수위 소식' : item.category === 'committee' ? '구민참여인수위원회' : '활동 일정'}
                         </span>
                         {item.badge && (
                           <span className="text-xs font-bold text-slate-400 uppercase tracking-wider bg-slate-50 px-2.5 py-1 rounded-lg border border-slate-100">

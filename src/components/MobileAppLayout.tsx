@@ -24,12 +24,16 @@ import PressDetail from './PressDetail';
 import NewsDay4Detail from './NewsDay4Detail';
 import NewsDay5Detail from './NewsDay5Detail';
 import NewsDay6Detail from './NewsDay6Detail';
+import CommitteeQA from './CommitteeQA';
+import CommitteeProposals from './CommitteeProposals';
+import CommitteeProposalsPart2 from './CommitteeProposalsPart2';
+import CommitteeProposalsPart3 from './CommitteeProposalsPart3';
 
 
 export default function MobileAppLayout() {
   const [activeTab, setActiveTab] = useState<'home' | 'news' | 'sns' | 'map'>('home');
   const [selectedItemId, setSelectedItemId] = useState<number | null>(null);
-  const [activeCategory, setActiveCategory] = useState<'all' | 'press' | 'media' | 'news' | 'schedule'>('all');
+  const [activeCategory, setActiveCategory] = useState<'all' | 'press' | 'media' | 'news' | 'committee' | 'schedule'>('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [showGreeting, setShowGreeting] = useState(false);
 
@@ -56,6 +60,18 @@ export default function MobileAppLayout() {
     } else if (path === '/press/insu-committee-launch') {
       setActiveTab('news');
       setSelectedItemId(10); // mockData ID for insu-committee-launch
+    } else if (path === '/committee/qa') {
+      setActiveTab('news');
+      setSelectedItemId(101);
+    } else if (path === '/committee/proposals') {
+      setActiveTab('news');
+      setSelectedItemId(100); // mockData ID for committee-proposals
+    } else if (path === '/committee/proposals-part2') {
+      setActiveTab('news');
+      setSelectedItemId(102); // mockData ID for committee-proposals-part2
+    } else if (path === '/committee/proposals-part3') {
+      setActiveTab('news');
+      setSelectedItemId(103); // mockData ID for committee-proposals-part3
     }
   }, []);
 
@@ -80,6 +96,14 @@ export default function MobileAppLayout() {
         setSelectedItemId(19);
       } else if (path === '/press/insu-committee-launch') {
         setSelectedItemId(10);
+      } else if (path === '/committee/qa') {
+        setSelectedItemId(101);
+      } else if (path === '/committee/proposals') {
+        setSelectedItemId(100);
+      } else if (path === '/committee/proposals-part2') {
+        setSelectedItemId(102);
+      } else if (path === '/committee/proposals-part3') {
+        setSelectedItemId(103);
       }
     };
     window.addEventListener('popstate', handlePopState);
@@ -330,7 +354,8 @@ export default function MobileAppLayout() {
                 { id: 'all', label: '전체' },
                 { id: 'press', label: '보도자료' },
                 { id: 'media', label: '언론보도' },
-                { id: 'news', label: '인수위' },
+                { id: 'news', label: '인수위 소식' },
+                { id: 'committee', label: '구민참여인수위원회' },
                 { id: 'schedule', label: '일정' }
               ].map((cat) => (
                 <button
@@ -366,9 +391,10 @@ export default function MobileAppLayout() {
                         <span className={`inline-block text-[10px] px-2 py-0.5 rounded font-black ${
                           item.category === 'press' ? 'bg-blue-50 text-blue-800' :
                           item.category === 'media' ? 'bg-indigo-50 text-indigo-850' :
-                          item.category === 'news' ? 'bg-amber-50 text-amber-800' : 'bg-emerald-50 text-emerald-800'
+                          item.category === 'news' ? 'bg-amber-50 text-amber-800' :
+                          item.category === 'committee' ? 'bg-violet-50 text-violet-850' : 'bg-emerald-50 text-emerald-800'
                         }`}>
-                          {item.category === 'press' ? '보도자료' : item.category === 'media' ? '언론 보도' : item.category === 'news' ? '인수위 소식' : '활동 일정'}
+                          {item.category === 'press' ? '보도자료' : item.category === 'media' ? '언론 보도' : item.category === 'news' ? '인수위 소식' : item.category === 'committee' ? '구민참여인수위원회' : '활동 일정'}
                         </span>
                         <span className="text-[10px] text-slate-350">{item.date}</span>
                       </div>
@@ -618,6 +644,14 @@ export default function MobileAppLayout() {
                 <NewsDay6Detail isBottomSheet={true} />
               ) : selectedItem.linkUrl === '/press/insu-committee-launch' ? (
                 <PressDetail isBottomSheet={true} />
+              ) : selectedItem.linkUrl === '/committee/qa' ? (
+                <CommitteeQA />
+              ) : selectedItem.linkUrl === '/committee/proposals' ? (
+                <CommitteeProposals />
+              ) : selectedItem.linkUrl === '/committee/proposals-part2' ? (
+                <CommitteeProposalsPart2 />
+              ) : selectedItem.linkUrl === '/committee/proposals-part3' ? (
+                <CommitteeProposalsPart3 />
               ) : (
                 /* Fallback renderer for other schedules or links */
                 <div className="space-y-5 py-4">

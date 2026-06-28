@@ -14,6 +14,10 @@ import MobileAppLayout from './components/MobileAppLayout';
 import NewsDay4Detail from './components/NewsDay4Detail';
 import NewsDay5Detail from './components/NewsDay5Detail';
 import NewsDay6Detail from './components/NewsDay6Detail';
+import CommitteeQA from './components/CommitteeQA';
+import CommitteeProposals from './components/CommitteeProposals';
+import CommitteeProposalsPart2 from './components/CommitteeProposalsPart2';
+import CommitteeProposalsPart3 from './components/CommitteeProposalsPart3';
 
 
 function VerticalTicker() {
@@ -122,6 +126,14 @@ function App() {
             <Directions />
           ) : path === '/press/insu-committee-launch' ? (
             <PressDetail />
+          ) : path === '/committee/qa' ? (
+            <CommitteeQA />
+          ) : path === '/committee/proposals' ? (
+            <CommitteeProposals />
+          ) : path === '/committee/proposals-part2' ? (
+            <CommitteeProposalsPart2 />
+          ) : path === '/committee/proposals-part3' ? (
+            <CommitteeProposalsPart3 />
           ) : (
             <>
               {/* Banner Announcement Bar */}
