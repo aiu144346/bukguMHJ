@@ -7,7 +7,6 @@ import {
   Search, 
   FileText, 
   Lightbulb, 
-  Award,
   CheckCircle2
 } from 'lucide-react';
 
