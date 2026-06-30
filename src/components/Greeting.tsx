@@ -82,28 +82,99 @@ export default function Greeting() {
               </div>
             </div>
 
-            <div className="pt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="rounded-2xl bg-blue-50/50 border border-blue-200/50 p-4.5 flex items-start gap-3.5 transition-all duration-300 hover:bg-blue-50 hover:border-blue-200">
-                <div className="rounded-xl bg-[#1E3A8A] p-2 text-white shadow-md shadow-blue-900/10">
-                  <Compass className="h-5 w-5" />
+            <div className="pt-6 space-y-6">
+              {/* 구정 목표 Card */}
+              <a 
+                href="/committee/proposals"
+                onClick={(e) => {
+                  e.preventDefault();
+                  if ((window as any).customNavigate) {
+                    (window as any).customNavigate('/committee/proposals');
+                  } else {
+                    window.location.pathname = '/committee/proposals';
+                  }
+                }}
+                className="block group rounded-3xl bg-gradient-to-r from-blue-50 to-[#EEF2FF] border border-blue-150 p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5"
+              >
+                <div className="flex items-center gap-4">
+                  <div className="rounded-2xl bg-[#1E3A8A] p-3 text-white shadow-md shadow-blue-900/10 group-hover:scale-105 transition-transform">
+                    <Compass className="h-6 w-6" />
+                  </div>
+                  <div>
+                    <span className="text-xs font-black text-[#1E3A8A] block mb-1 uppercase tracking-wider">구정 목표</span>
+                    <strong className="text-lg sm:text-xl font-black text-slate-900 group-hover:text-[#1E3A8A] transition-colors">
+                      구민과 함께, 미래를 여는 북구
+                    </strong>
+                  </div>
                 </div>
-                <div className="text-left">
-                  <span className="text-xs font-extrabold text-[#1E3A8A] block mb-0.5 uppercase tracking-wider">구정 비전</span>
-                  <strong className="text-base font-black text-gray-900">
-                    내 삶이 힘이 되는 북구
-                  </strong>
-                </div>
-              </div>
+              </a>
 
-              <div className="rounded-2xl bg-emerald-50/40 border border-emerald-200/40 p-4.5 flex items-start gap-3.5 transition-all duration-300 hover:bg-emerald-50 hover:border-emerald-200">
-                <div className="rounded-xl bg-emerald-600 p-2 text-white shadow-md shadow-emerald-900/10">
-                  <Target className="h-5 w-5" />
+              {/* 5대 구정방침 Card */}
+              <div className="rounded-3xl border border-slate-200/80 bg-white p-6 shadow-sm">
+                <div className="flex items-center gap-3 border-b border-slate-100 pb-4 mb-4">
+                  <div className="rounded-2xl bg-emerald-600 p-2.5 text-white shadow-md shadow-emerald-900/10">
+                    <Target className="h-5.5 w-5.5" />
+                  </div>
+                  <div>
+                    <h3 className="text-base font-black text-slate-900">5대 구정방침</h3>
+                    <p className="text-xs text-slate-400 font-semibold mt-0.5">원하시는 항목을 클릭하시면 정책 제안 플랫폼으로 연결됩니다</p>
+                  </div>
                 </div>
-                <div className="text-left">
-                  <span className="text-xs font-extrabold text-emerald-600 block mb-0.5 uppercase tracking-wider">3대 약속</span>
-                  <strong className="text-base font-black text-gray-900">
-                    일자리 · 교육 · 복지 혁신
-                  </strong>
+
+                <div className="grid gap-3.5 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2">
+                  {[
+                    {
+                      num: "1",
+                      title: "소통으로 여는 참여행정",
+                      bullets: ["주민 정책 제안 및 결정 참여", "현장에서 답을 찾는 열린 구정", "구민참여인수위원회, 플랫폼 운영"],
+                      color: "border-blue-100 bg-blue-50/20 text-blue-900"
+                    },
+                    {
+                      num: "2",
+                      title: "민생을 살리는 지역경제",
+                      bullets: ["골목상권과 소상공인 지원", "청년 일자리와 경제 활성화", "지역상권과 관광자원 연계"],
+                      color: "border-emerald-100 bg-emerald-50/20 text-emerald-950"
+                    },
+                    {
+                      num: "3",
+                      title: "미래를 준비하는 혁신성장",
+                      bullets: ["AI·디지털 기반 스마트 행정", "미래산업 및 교육 인프라 확대", "데이터 기반 정책 추진"],
+                      color: "border-indigo-100 bg-indigo-50/20 text-indigo-900"
+                    },
+                    {
+                      num: "4",
+                      title: "함께 누리는 포용복지",
+                      bullets: ["아이부터 어르신 촘촘한 돌봄", "장애와 차별 없는 무장애 도시", "생활밀착형 복지 강화"],
+                      color: "border-purple-100 bg-purple-50/20 text-purple-900"
+                    },
+                    {
+                      num: "5",
+                      title: "안전하고 품격있는 생활도시",
+                      bullets: ["재난·교통·생활안전 강화", "쾌적한 도시환경 조성", "문화와 자연이 어우러진 북구"],
+                      color: "border-amber-100 bg-amber-50/20 text-amber-950",
+                      span: "sm:col-span-2 lg:col-span-1"
+                    }
+                  ].map((item) => (
+                    <a
+                      key={item.num}
+                      href="https://forms.gle/QMTcmjm9YZscTMav6"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`block rounded-2xl border p-4 transition-all duration-300 hover:shadow-md hover:-translate-y-0.5 cursor-pointer ${item.color} ${item.span || ''}`}
+                    >
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className="flex h-5 w-5 items-center justify-center rounded-full bg-slate-900 text-white font-extrabold text-[10px]">
+                          <span>{item.num}</span>
+                        </span>
+                        <h4 className="font-extrabold text-sm sm:text-base text-slate-900">{item.title}</h4>
+                      </div>
+                      <ul className="space-y-1 text-xs text-slate-500 font-medium list-disc list-inside">
+                        {item.bullets.map((b, idx) => (
+                          <li key={idx} className="truncate">{b}</li>
+                        ))}
+                      </ul>
+                    </a>
+                  ))}
                 </div>
               </div>
             </div>
