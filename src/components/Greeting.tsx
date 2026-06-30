@@ -34,14 +34,14 @@ export default function Greeting() {
             </span>
 
             <h2
-              className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-5xl lg:leading-tight animate-fade-in"
-              style={{ fontFamily: '"Gowun Batang", serif' }}
+              className="text-3xl font-black tracking-tight text-slate-900 sm:text-5xl lg:leading-tight animate-fade-in"
+              style={{ fontFamily: "'Pretendard', sans-serif" }}
             >
-              "주민과 함께 여는<br />
-              <span className="relative inline-block text-[#1E3A8A] mt-2">
-                북구의 새로운 내일
-                <span className="absolute bottom-1.5 left-0 w-full h-2 bg-yellow-400/25 -z-10" />
-              </span>"
+              구민과 함께,<br />
+              <span className="relative inline-block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-[#1E3A8A] to-indigo-700 mt-2 font-black">
+                미래를 여는 북구
+                <span className="absolute bottom-1.5 left-0 w-full h-3 bg-blue-100/40 -z-10 rounded-lg" />
+              </span>
             </h2>
 
             {/* Premium Greeting Card Container with Background Image and Slow Floating Effect */}
@@ -60,16 +60,24 @@ export default function Greeting() {
 
               {/* Greeting Text Content */}
               <div className="relative z-10 space-y-5 text-base text-gray-700 leading-relaxed sm:text-lg text-left">
-                <p className="font-bold text-lg sm:text-xl text-[#0B1E43] border-b border-gray-200/50 pb-4">
-                  존경하고 사랑하는 부산 북구 주민 여러분, 안녕하십니까!<br />
-                  북구청장 <span className="underline decoration-blue-500 decoration-3 underline-offset-4 font-black">정명희</span>입니다.
+                <p className="font-bold text-lg sm:text-xl text-[#0B1E43] border-b border-gray-200/50 pb-4 leading-relaxed">
+                  존경하는 북구 구민 여러분! 반갑습니다.<br />
+                  민선 9기 부산 북구청장 <span className="underline decoration-blue-500 decoration-3 underline-offset-4 font-black">정명희</span>입니다.
                 </p>
-                <p className="text-gray-600 font-medium">
-                  주민 여러분께서 보내주신 뜨거운 신뢰와 변화를 향한 열망에 깊이 머리 숙여 감사드립니다.
-                  낙동강의 유려한 역사와 구포나루의 상생 정신을 이어받아, 우리 북구를 주민이 주인 되는 따뜻하고 활기찬 도시로 재창조하겠습니다.
+                <p className="text-gray-650 font-medium">
+                  우리 북구는 부산의 대표적 주거도시이면서 낙동강과 금정산, 화명생태공원 등 뛰어난 자연환경을 자랑하는 데다 김해공항이 가깝고 도시 내외곽으로 오가기 쉬운 교통망을 가진 매력적인 지역입니다.
                 </p>
-                <p className="text-gray-600 font-medium">
-                  '북구의 새로운 문을 여는 인수위원회' 활동 기간 동안 구민 한 분 한 분의 목소리를 경청하며, 약속드린 공약들을 면밀하고 투명하게 다듬겠습니다. 언제나 초심을 잃지 않고 소통하며 혁신하는 구정을 이끌어 가겠습니다.
+                <p className="text-gray-650 font-medium">
+                  민선 9기는 북구의 장점을 살리고 단점을 보완해 새로운 도약의 길을 열어 나가겠습니다. ‘구민과 함께, 미래를 여는 북구’를 구정 방향으로 삼고, ‘소통으로 여는 참여행정, 민생을 살리는 지역경제, 미래를 준비하는 혁신성장, 함께 누리는 포용복지, 안전하고 품격 있는 도시’를 구정 방침으로 추진하겠습니다.
+                </p>
+                <p className="text-gray-650 font-medium">
+                  아이 키우기 좋은 북구, 청년이 꿈을 펼칠 수 있는 북구, 어르신이 행복하고 복지가 든든한 북구, 소상공인이 힘을 얻는 북구, 문화와 관광 그리고 자연이 어우러진 활력도시 북구를 만들기 위해 성큼성큼 나아가겠습니다.
+                </p>
+                <p className="text-gray-650 font-medium">
+                  북구의 미래는 구청 행정만으로 만들 수 없습니다. 구민이 곧 북구의 주인이고, 북구 발전의 가장 큰 힘입니다. 구민의 목소리를 구정의 출발점으로 삼고, 현장에서 답을 찾고, 정책 결정 과정에 구민 참여를 확대하는 소통행정을 실천하겠습니다.
+                </p>
+                <p className="text-gray-650 font-medium">
+                  언제나 구민 곁에서 함께 고민하고 함께 해결하는 구청장이 되겠습니다. 새로운 희망, 새로운 도약의 길을 구민 여러분과 함께 걷겠습니다. 감사합니다.
                 </p>
               </div>
             </div>
