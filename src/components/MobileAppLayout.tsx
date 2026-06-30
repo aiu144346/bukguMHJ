@@ -175,7 +175,7 @@ export default function MobileAppLayout() {
       <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-100 px-4 py-3 shadow-[0_1px_8px_rgba(0,0,0,0.03)] flex justify-between items-center">
         <div>
           <h1 className="text-base font-black text-slate-900 tracking-tight" style={{ fontFamily: "'Gowun Batang', serif" }}>
-            정명희 부산 북구청장 당선인
+            정명희 부산 북구청장
           </h1>
           <p className="text-[10px] text-[#1E3A8A] font-bold tracking-wider" style={{ fontFamily: "'Gowun Batang', serif" }}>
             인수위원회 모바일 소통관
@@ -219,7 +219,7 @@ export default function MobileAppLayout() {
               <div className="absolute right-0 bottom-0 opacity-15 pointer-events-none">
                 <Compass className="h-32 w-32 translate-x-6 translate-y-6" />
               </div>
-              <span className="text-[10px] font-bold tracking-widest text-blue-200 uppercase bg-blue-950/40 px-2.5 py-1 rounded-full border border-blue-800/30">제9대 부산광역시 북구청장 당선인 정명희</span>
+              <span className="text-[10px] font-bold tracking-widest text-blue-200 uppercase bg-blue-950/40 px-2.5 py-1 rounded-full border border-blue-800/30">제9대 부산광역시 북구청장 정명희</span>
               <h2 className="text-xl font-black mt-3 leading-snug" style={{ fontFamily: "'Gowun Batang', serif" }}>
                 "주민과 함께 여는<br />북구의 새로운 내일"
               </h2>
@@ -717,7 +717,7 @@ export default function MobileAppLayout() {
               <div className="h-1.5 w-12 bg-slate-200 rounded-full mx-auto my-3.5" />
               <div className="flex items-center justify-between px-5 pb-2">
                 <span className="text-xs text-[#1E3A8A] font-extrabold flex items-center gap-1">
-                  당선인 인사말씀
+                  북구청장 인사말씀
                 </span>
                 <button 
                   onClick={() => setShowGreeting(false)}
@@ -734,14 +734,14 @@ export default function MobileAppLayout() {
                 <div className="h-20 w-20 rounded-full overflow-hidden mx-auto border-2 border-blue-100 mb-3">
                   <img src="/images/candidate.png" alt="정명희 당선인" className="w-full h-full object-cover object-top" />
                 </div>
-                <h3 className="text-lg font-black text-slate-900">정명희 부산 북구청장 당선인</h3>
+                <h3 className="text-lg font-black text-slate-900">정명희 부산 북구청장</h3>
                 <p className="text-xs text-blue-800 font-bold mt-1">"내 삶이 힘이 되는 북구"</p>
               </div>
 
               <div className="space-y-4">
                 <p className="font-extrabold text-base text-[#0B1E43] leading-relaxed">
                   존경하고 사랑하는 부산 북구 주민 여러분, 안녕하십니까!<br />
-                  북구청장 당선인 정명희입니다.
+                  북구청장 정명희입니다.
                 </p>
                 <p>
                   주민 여러분께서 보내주신 뜨거운 신뢰와 변화를 향한 열망에 깊이 머리 숙여 감사드립니다. 

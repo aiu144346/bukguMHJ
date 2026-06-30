@@ -62,7 +62,7 @@ export default function Greeting() {
               <div className="relative z-10 space-y-5 text-base text-gray-700 leading-relaxed sm:text-lg text-left">
                 <p className="font-bold text-lg sm:text-xl text-[#0B1E43] border-b border-gray-200/50 pb-4">
                   존경하고 사랑하는 부산 북구 주민 여러분, 안녕하십니까!<br />
-                  북구청장 당선인 <span className="underline decoration-blue-500 decoration-3 underline-offset-4 font-black">정명희</span>입니다.
+                  북구청장 <span className="underline decoration-blue-500 decoration-3 underline-offset-4 font-black">정명희</span>입니다.
                 </p>
                 <p className="text-gray-600 font-medium">
                   주민 여러분께서 보내주신 뜨거운 신뢰와 변화를 향한 열망에 깊이 머리 숙여 감사드립니다.
