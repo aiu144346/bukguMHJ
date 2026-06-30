@@ -120,7 +120,7 @@ export default function Greeting() {
                     <div className={`absolute inset-x-0 bottom-0 bg-white/95 backdrop-blur-sm p-5 border-t border-gray-200/50 text-left transition-all duration-[2000ms] ease-out transform ${animateText ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'
                       }`}>
                       <p className="text-base sm:text-lg font-black text-[#1E3A8A] tracking-wide mb-1.5">
-                        정명희 당선인의 약속
+                        정명희 북구청장
                       </p>
                       <p
                         className="text-xl sm:text-2xl font-bold text-gray-800 leading-relaxed"

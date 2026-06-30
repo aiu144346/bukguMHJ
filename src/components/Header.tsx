@@ -8,7 +8,7 @@ export default function Header() {
   const observerRef = useRef<IntersectionObserver | null>(null);
 
   const navItems = [
-    { label: '당선인 인사말', href: '#greeting' },
+    { label: '북구청장 인사말', href: '#greeting' },
     { label: '활동 소식통', href: '#activities' },
     { label: '소통 채널', href: '#sns' },
   ];
@@ -85,7 +85,7 @@ export default function Header() {
               className="text-xl font-extrabold tracking-tight text-slate-900 sm:text-2xl leading-tight transition duration-300 group-hover:text-[#1E3A8A]"
               style={{ fontFamily: "'Gowun Batang', serif" }}
             >
-              정명희 부산 북구청장 당선인
+              정명희 부산 북구청장
             </h1>
             <p 
               className="text-xs text-[#1E3A8A] sm:text-sm font-bold tracking-wide mt-0.5"
@@ -125,7 +125,7 @@ export default function Header() {
             className="ml-6 flex items-center gap-2 rounded-xl bg-[#1E3A8A] text-white px-5 py-3 text-base font-extrabold transition-all duration-300 min-h-[44px] shadow-lg shadow-blue-900/10 hover:bg-[#152a64] hover:shadow-xl hover:shadow-blue-900/20 active:scale-98 animate-soft-pulse"
           >
             <ClipboardCheck className="h-4.5 w-4.5" />
-            구민참여인수위원회 신청
+            정책제안 신청
           </a>
         </nav>
 
@@ -191,7 +191,7 @@ export default function Header() {
               className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#1E3A8A] text-white py-4 text-base font-extrabold transition-all shadow-lg shadow-blue-900/10 hover:bg-[#152a64] min-h-[48px] animate-soft-pulse"
             >
               <ClipboardCheck className="h-5 w-5" />
-              구민참여인수위원회 신청
+              정책제안 신청
             </a>
           </div>
         </div>
