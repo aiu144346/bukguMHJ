@@ -77,7 +77,7 @@ export default function Directions() {
             {/* Map Action Buttons */}
             <div className="flex flex-wrap gap-4 mt-4 justify-start">
               <a
-                href="https://map.naver.com/v5/directions/-,/%EB%B6%80%EC%82%B0%EB%B6%85%EA%B5%AC%EB%AC%B8%ED%99%94%EC%98%88%EC%88%A0%ED%9A%8C%EA%B4%80,13554471,PLACE_POI"
+                href="https://map.naver.com/v5/search/%EB%B6%80%EC%82%B0%EB%B6%85%EA%B5%AC%EB%AC%B8%ED%99%94%EC%98%88%EC%88%A0%ED%9A%8C%EA%B4%80"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl bg-[#03C75A] text-white font-extrabold hover:bg-[#02b350] transition-all shadow-md hover:shadow-lg shadow-green-500/10 min-h-[46px] text-sm sm:text-base cursor-pointer"
@@ -85,7 +85,7 @@ export default function Directions() {
                 <span>N</span> 네이버 지도 길찾기
               </a>
               <a
-                href="https://map.kakao.com/link/to/부산북구문화예술회관,35.210515,129.006935"
+                href="https://map.kakao.com/link/search/%EB%B6%80%EC%82%B0%EB%B6%85%EA%B5%AC%EB%AC%B8%ED%99%94%EC%98%88%EC%88%A0%ED%9A%8C%EA%B4%80"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl bg-[#FEE500] text-[#191919] font-extrabold hover:bg-[#ebd300] transition-all shadow-md hover:shadow-lg shadow-yellow-500/10 min-h-[46px] text-sm sm:text-base cursor-pointer"
