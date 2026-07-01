@@ -511,7 +511,7 @@ export default function MobileAppLayout() {
               </div>
               <div className="grid grid-cols-2 gap-3 mt-2">
                 <a
-                  href="https://map.naver.com/v5/search/%EB%B6%80%EC%82%B0%EB%B6%85%EA%B5%AC%EB%AC%B8%ED%99%94%EC%98%88%EC%88%A0%ED%9A%8C%EA%B4%80"
+                  href="https://map.naver.com/v5/search/부산북구문화예술회관"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-[#03C75A] text-white font-extrabold text-xs active:bg-[#02a350] transition shadow-sm"
@@ -519,7 +519,7 @@ export default function MobileAppLayout() {
                   네이버 길찾기
                 </a>
                 <a
-                  href="https://map.kakao.com/?q=%EB%B6%80%EC%82%B0%EB%B6%85%EA%B5%AC%EB%AC%B8%ED%99%94%EC%98%88%EC%88%A0%ED%9A%8C%EA%B4%80"
+                  href="https://map.kakao.com/?q=부산북구문화예술회관"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-[#FEE500] text-[#191919] font-extrabold text-xs active:bg-[#ebd300] transition shadow-sm"
