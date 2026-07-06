@@ -296,7 +296,7 @@ export default function CommitteeProposalsPart2() {
         {/* CTA section */}
         <section className="bg-gradient-to-br from-teal-900 to-indigo-950 text-white rounded-3xl p-6 sm:p-10 text-center shadow-lg space-y-6">
           <h3 className="text-xl sm:text-2xl font-black">구민참여위원들의 소중한 정책제안에 진심으로 감사드립니다!</h3>
-          <p className="text-xs sm:text-sm text-teal-200 max-w-xl mx-auto leading-relaxed">
+          <p className="text-xs sm:text-sm text-teal-200 max-w-xl mx-auto leading-relaxed break-keep">
             민선 9기 부산 북구 구민참여인수위원회 위원 모집은 마감되었습니다. 참여해주신 모든 분들께 깊이 감사드리며, 더 나은 북구를 만들기 위한 구민 여러분의 정책 제안은 상시로 계속해서 접수하고 있으니 소중한 정책제안 신청을 부탁드립니다.
           </p>
           <div>
