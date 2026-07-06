@@ -324,9 +324,9 @@ export default function CommitteeProposals() {
 
         {/* CTA section */}
         <section className="bg-gradient-to-br from-violet-900 to-indigo-950 text-white rounded-3xl p-6 sm:p-10 text-center shadow-lg space-y-6">
-          <h3 className="text-xl sm:text-2xl font-black">북구의 새로운 미래, 당신의 참여로 시작됩니다!</h3>
+          <h3 className="text-xl sm:text-2xl font-black">구민참여위원들의 소중한 정책제안에 진심으로 감사드립니다!</h3>
           <p className="text-xs sm:text-sm text-violet-200 max-w-xl mx-auto leading-relaxed">
-            주민이 정책의 주인이 되어 더 나은 북구를 함께 설계하는 '구민참여인수위원회'에 구민 여러분의 값진 의견과 참여를 보태어 주십시오.
+            민선 9기 부산 북구 구민참여인수위원회 위원 모집 및 공식 활동은 마감되었습니다. 참여해주신 모든 분들께 깊이 감사드리며, 더 나은 북구를 만들기 위한 구민 여러분의 정책 제안은 상시로 계속해서 접수하고 있으니 소중한 정책제안 신청을 부탁드립니다.
           </p>
           <div>
             <a
@@ -336,7 +336,7 @@ export default function CommitteeProposals() {
               className="inline-flex items-center gap-2 rounded-xl bg-white text-violet-900 px-6 py-3.5 text-sm sm:text-base font-black shadow-lg hover:bg-slate-100 transition duration-300 min-h-[46px]"
             >
               <CheckCircle2 className="h-5 w-5 text-violet-600" />
-              구민참여인수위원회 신청하기
+              정책제안 신청하기
             </a>
           </div>
         </section>
