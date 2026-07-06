@@ -28,6 +28,7 @@ import CommitteeQA from './CommitteeQA';
 import CommitteeProposals from './CommitteeProposals';
 import CommitteeProposalsPart2 from './CommitteeProposalsPart2';
 import CommitteeProposalsPart3 from './CommitteeProposalsPart3';
+import CommitteeProposalsPart4 from './CommitteeProposalsPart4';
 
 
 export default function MobileAppLayout() {
@@ -72,6 +73,9 @@ export default function MobileAppLayout() {
     } else if (path === '/committee/proposals-part3') {
       setActiveTab('news');
       setSelectedItemId(103); // mockData ID for committee-proposals-part3
+    } else if (path === '/committee/proposals-part4') {
+      setActiveTab('news');
+      setSelectedItemId(104); // mockData ID for committee-proposals-part4
     }
   }, []);
 
@@ -104,6 +108,8 @@ export default function MobileAppLayout() {
         setSelectedItemId(102);
       } else if (path === '/committee/proposals-part3') {
         setSelectedItemId(103);
+      } else if (path === '/committee/proposals-part4') {
+        setSelectedItemId(104);
       }
     };
     window.addEventListener('popstate', handlePopState);
@@ -652,6 +658,8 @@ export default function MobileAppLayout() {
                 <CommitteeProposalsPart2 />
               ) : selectedItem.linkUrl === '/committee/proposals-part3' ? (
                 <CommitteeProposalsPart3 />
+              ) : selectedItem.linkUrl === '/committee/proposals-part4' ? (
+                <CommitteeProposalsPart4 />
               ) : (
                 /* Fallback renderer for other schedules or links */
                 <div className="space-y-5 py-4">

@@ -86,6 +86,16 @@ export const mockData: BoardItem[] = [
   },
   // 보도자료 (press)
   {
+    id: 104,
+    category: 'committee',
+    title: '구민참여위원회 위원들의 정책제안 Part IV',
+    date: '2026-06-23',
+    excerpt: '민선 9기 부산 북구 구민참여인수위원회 위원들이 제안한 행정기관 및 기업 유치, 문화 공실 뱅크, 백양산 등산로 개척 등 네 번째 생생한 제안 사항들을 카드뉴스로 만나보세요.',
+    badge: '정책 제안',
+    imageUrl: '/images/proposals_part4_thumbnail.png',
+    linkUrl: '/committee/proposals-part4'
+  },
+  {
     id: 103,
     category: 'committee',
     title: '구민참여위원회 위원들의 정책제안 Part III',
