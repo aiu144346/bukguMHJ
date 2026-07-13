@@ -30,6 +30,7 @@ import CommitteeProposalsPart2 from './CommitteeProposalsPart2';
 import CommitteeProposalsPart3 from './CommitteeProposalsPart3';
 import CommitteeProposalsPart4 from './CommitteeProposalsPart4';
 import SympathyMeetingDetail from './SympathyMeetingDetail';
+import SympathyMeetingPopup from './SympathyMeetingPopup';
 
 
 export default function MobileAppLayout() {
@@ -209,6 +210,9 @@ export default function MobileAppLayout() {
         {/* TAB 1: HOME */}
         {activeTab === 'home' && (
           <div className="space-y-5 px-4 py-4">
+            {/* Sympathy Meeting attendance survey popup modal */}
+            {selectedItemId === null && <SympathyMeetingPopup />}
+
             {/* Notice Rolling Ticker */}
             <div className="bg-[#1E3A8A] text-white py-2 px-3 rounded-xl flex items-center gap-2.5 shadow-sm">
               <span className="bg-red-500 text-[10px] text-white px-2 py-0.5 rounded font-black shrink-0 animate-pulse">공지</span>

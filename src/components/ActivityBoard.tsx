@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Newspaper, Calendar, Info, Search, ExternalLink, Inbox, ClipboardCheck } from 'lucide-react';
+import { Newspaper, Calendar, Info, Search, ExternalLink, Inbox, ClipboardCheck, Grid } from 'lucide-react';
 
 export interface BoardItem {
   id: number;
@@ -314,12 +314,12 @@ export default function ActivityBoard() {
   const [searchQuery, setSearchQuery] = useState('');
 
   const tabs = [
-    { id: 'all', label: '전체 소식' },
-    { id: 'press', label: '보도자료' },
-    { id: 'media', label: '언론 보도' },
-    { id: 'news', label: '인수위 소식' },
-    { id: 'committee', label: '구민참여인수위원회' },
-    { id: 'schedule', label: '활동 일정' }
+    { id: 'all', label: '전체 소식', icon: Grid },
+    { id: 'press', label: '보도자료', icon: Newspaper },
+    { id: 'media', label: '언론 보도', icon: Newspaper },
+    { id: 'news', label: '인수위 소식', icon: Info },
+    { id: 'committee', label: '구민참여인수위원회', icon: ClipboardCheck },
+    { id: 'schedule', label: '활동 일정', icon: Calendar }
   ];
 
   // Filtering
@@ -350,28 +350,26 @@ export default function ActivityBoard() {
         <div className="mt-12 flex flex-col md:flex-row md:items-center md:justify-between gap-6 bg-white p-4 sm:p-5 rounded-2xl shadow-sm border border-slate-100">
           
           {/* Segmented Control Tab Bar */}
-          <div className="relative bg-slate-100/80 p-1 rounded-2xl flex w-full md:max-w-3xl border border-slate-200/40 shadow-inner">
-            {/* Sliding Background Chip */}
-            <div 
-              className="absolute top-1 bottom-1 bg-white rounded-xl shadow-md transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]"
-              style={{
-                left: `calc(1px + (${tabs.findIndex(t => t.id === activeTab)} * (100% - 2px) / ${tabs.length}))`,
-                width: `calc((100% - 2px) / ${tabs.length})`
-              }}
-            />
-            {/* Tab Buttons */}
-            {tabs.map((tab) => (
-              <button
-                key={tab.id}
-                onClick={() => setActiveTab(tab.id as any)}
-                type="button"
-                className={`relative z-10 flex-1 py-3.5 text-sm sm:text-base font-extrabold text-center transition-colors duration-300 min-h-[46px] cursor-pointer ${
-                  activeTab === tab.id ? 'text-[#1E3A8A]' : 'text-slate-500 hover:text-slate-800'
-                }`}
-              >
-                {tab.label}
-              </button>
-            ))}
+          <div className="flex w-full md:max-w-4xl overflow-x-auto whitespace-nowrap bg-slate-100/90 p-1.5 rounded-2xl border border-slate-200/50 shadow-inner gap-1.5 scrollbar-none">
+            {tabs.map((tab) => {
+              const Icon = tab.icon;
+              const isActive = activeTab === tab.id;
+              return (
+                <button
+                  key={tab.id}
+                  onClick={() => setActiveTab(tab.id as any)}
+                  type="button"
+                  className={`inline-flex items-center justify-center gap-2 px-5 py-3 text-sm sm:text-base font-extrabold rounded-xl transition-all duration-200 cursor-pointer shrink-0 group ${
+                    isActive
+                      ? 'bg-[#1E3A8A] text-white shadow-md'
+                      : 'text-slate-600 hover:text-slate-900 hover:bg-slate-200/50'
+                  }`}
+                >
+                  <Icon className={`h-4.5 w-4.5 shrink-0 transition-transform duration-200 ${isActive ? 'scale-110 text-white' : 'text-slate-400 group-hover:text-slate-600'}`} />
+                  <span>{tab.label}</span>
+                </button>
+              );
+            })}
           </div>
 
           {/* Search bar */}

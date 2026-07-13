@@ -79,7 +79,7 @@ export default function SympathyMeetingDetail({ isBottomSheet = false }: Sympath
           </h3>
           <ul className="list-disc pl-5 space-y-1.5 text-gray-700 text-sm sm:text-base">
             <li><strong>타운홀 미팅 형태:</strong> 권위주의적 관행을 탈피하고 밀착형 소통을 실현하기 위해, 구청장이 직접 위원님들의 테이블을 찾아가 임명장을 수여하고 현장 제안에 즉석 피드백을 드립니다.</li>
-            <li><strong>분과별 지정 좌석제(라운드테이블):</strong> 동일한 지역 현안에 관심을 가진 위원님들이 자연스럽게 교류하실 수 있도록 희망 분과별로 좌석이 매칭되어 운영됩니다.</li>
+            <li><strong>분과별 지정 좌석제:</strong> 동일한 지역 현안에 관심을 가진 위원님들이 자연스럽게 교류하실 수 있도록 희망 분과별로 좌석이 매칭되어 운영됩니다.</li>
           </ul>
         </div>
 
@@ -102,7 +102,7 @@ export default function SympathyMeetingDetail({ isBottomSheet = false }: Sympath
               <MapPin className="h-6 w-6 text-emerald-600 shrink-0 mt-0.5" />
               <div className="space-y-1">
                 <span className="text-xs text-gray-400 font-bold">장소</span>
-                <p className="text-base font-extrabold text-gray-800">북구청 지하강당</p>
+                <p className="text-base font-extrabold text-gray-800">북구청 대회의실</p>
               </div>
             </div>
 
