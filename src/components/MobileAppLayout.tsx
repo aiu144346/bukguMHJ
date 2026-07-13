@@ -29,6 +29,7 @@ import CommitteeProposals from './CommitteeProposals';
 import CommitteeProposalsPart2 from './CommitteeProposalsPart2';
 import CommitteeProposalsPart3 from './CommitteeProposalsPart3';
 import CommitteeProposalsPart4 from './CommitteeProposalsPart4';
+import SympathyMeetingDetail from './SympathyMeetingDetail';
 
 
 export default function MobileAppLayout() {
@@ -76,6 +77,9 @@ export default function MobileAppLayout() {
     } else if (path === '/committee/proposals-part4') {
       setActiveTab('news');
       setSelectedItemId(104); // mockData ID for committee-proposals-part4
+    } else if (path === '/committee/sympathy-meeting') {
+      setActiveTab('news');
+      setSelectedItemId(105); // mockData ID for sympathy-meeting
     }
   }, []);
 
@@ -110,6 +114,8 @@ export default function MobileAppLayout() {
         setSelectedItemId(103);
       } else if (path === '/committee/proposals-part4') {
         setSelectedItemId(104);
+      } else if (path === '/committee/sympathy-meeting') {
+        setSelectedItemId(105);
       }
     };
     window.addEventListener('popstate', handlePopState);
@@ -660,6 +666,8 @@ export default function MobileAppLayout() {
                 <CommitteeProposalsPart3 />
               ) : selectedItem.linkUrl === '/committee/proposals-part4' ? (
                 <CommitteeProposalsPart4 />
+              ) : selectedItem.linkUrl === '/committee/sympathy-meeting' ? (
+                <SympathyMeetingDetail isBottomSheet={true} />
               ) : (
                 /* Fallback renderer for other schedules or links */
                 <div className="space-y-5 py-4">

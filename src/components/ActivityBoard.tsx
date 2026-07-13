@@ -15,6 +15,16 @@ export interface BoardItem {
 
 export const mockData: BoardItem[] = [
   {
+    id: 105,
+    category: 'committee',
+    title: '민선9기 부산 북구 구민참여인수위원회 「공감간담회」 개최 및 참석 수요조사 안내',
+    date: '2026-07-13',
+    excerpt: '구청장과 위원님들이 직접 대면하여 북구의 핵심 현안을 함께 고민하고 격의 없이 소통하는 「공감간담회」를 개최하오니 참석 수요조사에 응해 주시기 바랍니다.',
+    badge: '간담회 안내',
+    imageUrl: '/images/bukgu_map_thumbnail.png',
+    linkUrl: '/committee/sympathy-meeting'
+  },
+  {
     id: 26,
     category: 'media',
     title: '정명희 인수위, "북구청 신청사 사업 중단 요구"',

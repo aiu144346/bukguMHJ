@@ -19,6 +19,7 @@ import CommitteeProposals from './components/CommitteeProposals';
 import CommitteeProposalsPart2 from './components/CommitteeProposalsPart2';
 import CommitteeProposalsPart3 from './components/CommitteeProposalsPart3';
 import CommitteeProposalsPart4 from './components/CommitteeProposalsPart4';
+import SympathyMeetingDetail from './components/SympathyMeetingDetail';
 
 
 function VerticalTicker() {
@@ -137,6 +138,8 @@ function App() {
             <CommitteeProposalsPart3 />
           ) : path === '/committee/proposals-part4' ? (
             <CommitteeProposalsPart4 />
+          ) : path === '/committee/sympathy-meeting' ? (
+            <SympathyMeetingDetail />
           ) : (
             <>
               {/* Banner Announcement Bar */}
