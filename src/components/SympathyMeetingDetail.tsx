@@ -102,7 +102,8 @@ export default function SympathyMeetingDetail({ isBottomSheet = false }: Sympath
               <MapPin className="h-6 w-6 text-emerald-600 shrink-0 mt-0.5" />
               <div className="space-y-1">
                 <span className="text-xs text-gray-400 font-bold">장소</span>
-                <p className="text-base font-extrabold text-gray-800">북구청 대회의실</p>
+                <p className="text-base font-extrabold text-gray-800">구포2동 행정복지센터 4층 어울림터(강당)</p>
+                <p className="text-xs text-gray-500 font-normal">부산광역시 북구 낙동북로681번길 23</p>
               </div>
             </div>
 

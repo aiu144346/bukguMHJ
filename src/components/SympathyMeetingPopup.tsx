@@ -88,9 +88,12 @@ export default function SympathyMeetingPopup() {
             
             {/* Event Info Bullet points */}
             <div className="mt-3 bg-slate-50 rounded-xl p-3 border border-slate-100 text-xs text-slate-650 space-y-1.5 font-bold">
-              <div className="flex items-center gap-1.5 text-slate-800">
-                <MapPin className="h-3.5 w-3.5 text-emerald-600 shrink-0" />
-                <span>장소: <strong>북구청 대회의실</strong></span>
+              <div className="flex items-start gap-1.5 text-slate-800">
+                <MapPin className="h-3.5 w-3.5 text-emerald-600 shrink-0 mt-0.5" />
+                <div>
+                  <span>장소: <strong>구포2동 행정복지센터 4층 어울림터(강당)</strong></span>
+                  <p className="text-[10px] text-slate-500 font-normal mt-0.5">부산광역시 북구 낙동북로681번길 23</p>
+                </div>
               </div>
               <div className="flex items-center gap-1.5 text-slate-800">
                 <ClipboardCheck className="h-3.5 w-3.5 text-[#1E3A8A] shrink-0" />
