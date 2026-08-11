@@ -118,11 +118,23 @@ export default function Header() {
               }`} />
             </a>
           ))}
+          <button
+            onClick={() => {
+              if ((window as any).customNavigate) {
+                (window as any).customNavigate('/committee/proposals-excel');
+              } else {
+                window.location.pathname = '/committee/proposals-excel';
+              }
+            }}
+            className="px-4 py-2 text-[#1E3A8A] hover:bg-blue-50 bg-blue-50/60 rounded-xl text-sm sm:text-base font-extrabold border border-blue-200/80 transition cursor-pointer flex items-center gap-1.5"
+          >
+            <span>📢 제안&답변 219건 목록</span>
+          </button>
           <a
             href="https://forms.gle/QMTcmjm9YZscTMav6"
             target="_blank"
             rel="noopener noreferrer"
-            className="ml-6 flex items-center gap-2 rounded-xl bg-[#1E3A8A] text-white px-5 py-3 text-base font-extrabold transition-all duration-300 min-h-[44px] shadow-lg shadow-blue-900/10 hover:bg-[#152a64] hover:shadow-xl hover:shadow-blue-900/20 active:scale-98 animate-soft-pulse"
+            className="ml-3 flex items-center gap-2 rounded-xl bg-[#1E3A8A] text-white px-5 py-3 text-base font-extrabold transition-all duration-300 min-h-[44px] shadow-lg shadow-blue-900/10 hover:bg-[#152a64] hover:shadow-xl hover:shadow-blue-900/20 active:scale-98 animate-soft-pulse"
           >
             <ClipboardCheck className="h-4.5 w-4.5" />
             정책제안 신청
