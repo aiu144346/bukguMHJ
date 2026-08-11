@@ -191,7 +191,7 @@ export default function CommitteeProposals() {
             구민 정책제안 & 소관부서 답변 목록
           </h1>
           <p className="text-xs sm:text-sm text-slate-500 max-w-2xl mx-auto font-medium">
-            인수위원회 위원들과 구민들께서 작성해주신 정책제안과 이에 대한 소관부서의 공식 검토 및 답변 내용을 투명하게 안내해 드립니다.
+            구민참여인수위원회 위원분들께서 작성해주신 정책제안과 이에 대한 소관부서의 공식 검토 및 답변 내용을 안내해 드립니다.
           </p>
         </div>
 
