@@ -149,8 +149,8 @@ export default function CommitteeProposals() {
     <div className="bg-slate-50 min-h-screen py-8 sm:py-12">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 space-y-10">
         
-        {/* Navigation Bar & File Upload */}
-        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm">
+        {/* Navigation Bar */}
+        <div className="flex justify-between items-center bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm">
           <button 
             onClick={goBack}
             className="inline-flex items-center gap-2 text-slate-600 hover:text-slate-900 font-extrabold text-sm transition cursor-pointer"
@@ -158,19 +158,6 @@ export default function CommitteeProposals() {
             <ArrowLeft className="h-4 w-4" />
             메인 페이지로 돌아가기
           </button>
-          
-          <div className="flex items-center gap-3 w-full sm:w-auto">
-            <label className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#1E3A8A] hover:bg-blue-900 text-white px-4 py-2.5 rounded-xl font-extrabold text-xs sm:text-sm shadow-md transition cursor-pointer active:scale-95">
-              <Upload className="h-4 w-4 text-yellow-400" />
-              <span>엑셀 파일(.xlsx) 업로드 / 업데이트</span>
-              <input 
-                type="file" 
-                accept=".xlsx, .xls, .csv" 
-                onChange={handleExcelUpload}
-                className="hidden" 
-              />
-            </label>
-          </div>
         </div>
 
         {/* Upload Status Banner Notification */}
