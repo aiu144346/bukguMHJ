@@ -128,7 +128,7 @@ export default function Header() {
             }}
             className="px-4 py-2 text-[#1E3A8A] hover:bg-blue-50 bg-blue-50/60 rounded-xl text-sm sm:text-base font-extrabold border border-blue-200/80 transition cursor-pointer flex items-center gap-1.5"
           >
-            <span>📢 제안&답변 219건 목록</span>
+            <span>정책제안&답변</span>
           </button>
           <a
             href="https://forms.gle/QMTcmjm9YZscTMav6"
