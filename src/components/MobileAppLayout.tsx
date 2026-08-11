@@ -66,9 +66,9 @@ export default function MobileAppLayout() {
     } else if (path === '/committee/qa') {
       setActiveTab('news');
       setSelectedItemId(101);
-    } else if (path === '/committee/proposals') {
+    } else if (path === '/committee/proposals' || path === '/committee/proposals-excel') {
       setActiveTab('news');
-      setSelectedItemId(100); // mockData ID for committee-proposals
+      setSelectedItemId(106); // mockData ID for committee-proposals-excel
     } else if (path === '/committee/proposals-part2') {
       setActiveTab('news');
       setSelectedItemId(102); // mockData ID for committee-proposals-part2
@@ -107,8 +107,8 @@ export default function MobileAppLayout() {
         setSelectedItemId(10);
       } else if (path === '/committee/qa') {
         setSelectedItemId(101);
-      } else if (path === '/committee/proposals') {
-        setSelectedItemId(100);
+      } else if (path === '/committee/proposals' || path === '/committee/proposals-excel') {
+        setSelectedItemId(106);
       } else if (path === '/committee/proposals-part2') {
         setSelectedItemId(102);
       } else if (path === '/committee/proposals-part3') {
@@ -194,15 +194,23 @@ export default function MobileAppLayout() {
             인수위원회 모바일 소통관
           </p>
         </div>
-        <a 
-          href="https://forms.gle/QMTcmjm9YZscTMav6"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-xs bg-[#1E3A8A] text-white px-3 py-1.5 rounded-lg font-bold flex items-center gap-1 shadow-sm shadow-blue-900/10 active:scale-95 transition-all"
-        >
-          <ClipboardCheck className="h-3.5 w-3.5" />
-          신청하기
-        </a>
+        <div className="flex items-center gap-2">
+          <button 
+            onClick={() => openItemDetails(106)}
+            className="text-[11px] bg-blue-50 text-[#1E3A8A] border border-blue-200 px-2.5 py-1.5 rounded-lg font-extrabold flex items-center gap-1 active:scale-95 transition-all cursor-pointer"
+          >
+            정책제안&답변
+          </button>
+          <a 
+            href="https://forms.gle/QMTcmjm9YZscTMav6"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs bg-[#1E3A8A] text-white px-3 py-1.5 rounded-lg font-bold flex items-center gap-1 shadow-sm shadow-blue-900/10 active:scale-95 transition-all"
+          >
+            <ClipboardCheck className="h-3.5 w-3.5" />
+            신청하기
+          </a>
+        </div>
       </header>
 
       {/* Main Tab Views */}
@@ -662,7 +670,7 @@ export default function MobileAppLayout() {
                 <PressDetail isBottomSheet={true} />
               ) : selectedItem.linkUrl === '/committee/qa' ? (
                 <CommitteeQA />
-              ) : selectedItem.linkUrl === '/committee/proposals' ? (
+              ) : selectedItem.linkUrl === '/committee/proposals' || selectedItem.linkUrl === '/committee/proposals-excel' ? (
                 <CommitteeProposals />
               ) : selectedItem.linkUrl === '/committee/proposals-part2' ? (
                 <CommitteeProposalsPart2 />
