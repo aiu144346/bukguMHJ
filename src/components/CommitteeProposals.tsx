@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import * as XLSX from 'xlsx';
 import { 
   ArrowLeft, 
   ChevronLeft, 
@@ -9,7 +8,6 @@ import {
   FileText, 
   Lightbulb, 
   CheckCircle2,
-  Upload,
   Building2,
   MessageSquare,
   FileSpreadsheet,
@@ -32,7 +30,7 @@ interface Proposal {
 const initialProposalsData: Proposal[] = excelProposalsData as Proposal[];
 
 export default function CommitteeProposals() {
-  const [proposals, setProposals] = useState<Proposal[]>(initialProposalsData);
+  const [proposals] = useState<Proposal[]>(initialProposalsData);
   const [currentProposalCard, setCurrentProposalCard] = useState(0);
   const [searchQuery, setSearchQuery] = useState('');
   const [activeTag, setActiveTag] = useState('전체');
@@ -42,65 +40,6 @@ export default function CommitteeProposals() {
 
   const tags = ['전체', ...Array.from(new Set(proposals.map(p => p.tag).filter(Boolean)))];
   const departments = ['전체', ...Array.from(new Set(proposals.map(p => p.department).filter(Boolean)))];
-
-  const handleExcelUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (!file) return;
-
-    const reader = new FileReader();
-    reader.onload = (evt) => {
-      try {
-        const data = evt.target?.result;
-        const workbook = XLSX.read(data, { type: 'binary' });
-        const sheetName = workbook.SheetNames[0];
-        const worksheet = workbook.Sheets[sheetName];
-        const rawJson: any[] = XLSX.utils.sheet_to_json(worksheet);
-
-        if (!rawJson || rawJson.length === 0) {
-          alert('엑셀 파일에 데이터가 없습니다.');
-          return;
-        }
-
-        const parsedProposals: Proposal[] = rawJson.map((row, idx) => {
-          const getVal = (possibleKeys: string[]) => {
-            for (const key of possibleKeys) {
-              const matchedKey = Object.keys(row).find(k => k.trim() === key.trim() || k.replaceAll(' ', '').includes(key.replaceAll(' ', '')));
-              if (matchedKey && row[matchedKey] !== undefined) {
-                return String(row[matchedKey]).trim();
-              }
-            }
-            return '';
-          };
-
-          const proposer = getVal(['제안자', '제안자명', '이름']);
-          const detail = getVal(['제안내용', '정책제안내용', '제안']);
-          const tag = getVal(['비고', '카테고리', '분야', '유형']) || '구민제안';
-          const answer = getVal(['홈페이지 답변내용', '답변내용', '홈페이지답변내용', '답변', '소관부서답변']);
-          const department = getVal(['소관부서', '담당부서', '부서명', '부서']) || '미지정';
-          const topic = getVal(['제목', '제안제목', '주제']) || (detail.length > 35 ? detail.substring(0, 35) + '...' : detail);
-
-          return {
-            id: idx + 1,
-            proposer: proposer || `제안자 ${idx + 1}`,
-            topic,
-            detail: detail || '제안 내용이 없습니다.',
-            tag,
-            answer,
-            department
-          };
-        });
-
-        setProposals(parsedProposals);
-        setCurrentProposalCard(0);
-        setUploadNotice(`✅ 엑셀 파일에서 총 ${parsedProposals.length}건의 정책제안 및 답변 데이터를 성공적으로 업로드했습니다!`);
-        setTimeout(() => setUploadNotice(null), 7000);
-      } catch (err) {
-        console.error('Excel upload error:', err);
-        alert('엑셀 파일을 읽는 도중 오류가 발생했습니다. 파일 서식이 정상적인지 확인해 주세요.');
-      }
-    };
-    reader.readAsBinaryString(file);
-  };
 
   const toggleExpand = (id: number) => {
     setExpandedIds(prev => ({ ...prev, [id]: !prev[id] }));
