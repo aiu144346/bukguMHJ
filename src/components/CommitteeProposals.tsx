@@ -270,6 +270,43 @@ export default function CommitteeProposals() {
             </div>
           </div>
 
+          {/* Quick Filter: Answer Availability Status */}
+          <div className="flex flex-wrap gap-2 items-center bg-blue-50/70 p-3 rounded-2xl border border-blue-100">
+            <span className="text-xs font-black text-[#1E3A8A] px-2 flex items-center gap-1">
+              💬 답변 등록 필터:
+            </span>
+            <button
+              onClick={() => { setActiveTag('전체'); setSearchQuery(''); }}
+              className={`px-3.5 py-1.5 rounded-xl text-xs font-extrabold transition cursor-pointer ${
+                activeTag === '전체' && searchQuery === ''
+                  ? 'bg-[#1E3A8A] text-white shadow-sm'
+                  : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'
+              }`}
+            >
+              전체 보기 ({proposals.length}건)
+            </button>
+            <button
+              onClick={() => { setActiveTag('1차 답변 대상'); }}
+              className={`px-3.5 py-1.5 rounded-xl text-xs font-extrabold transition cursor-pointer ${
+                activeTag === '1차 답변 대상'
+                  ? 'bg-emerald-600 text-white shadow-sm'
+                  : 'bg-white text-emerald-700 hover:bg-emerald-50 border border-emerald-200'
+              }`}
+            >
+              ✅ 공식 답변 등록 완료 ({proposals.filter(p => p.answer && p.answer.trim()).length}건)
+            </button>
+            <button
+              onClick={() => { setActiveTag('추가 작성 필요'); }}
+              className={`px-3.5 py-1.5 rounded-xl text-xs font-extrabold transition cursor-pointer ${
+                activeTag === '추가 작성 필요'
+                  ? 'bg-amber-600 text-white shadow-sm'
+                  : 'bg-white text-amber-800 hover:bg-amber-50 border border-amber-200'
+              }`}
+            >
+              ⏳ 답변 작성 진행중 ({proposals.filter(p => !p.answer || !p.answer.trim()).length}건)
+            </button>
+          </div>
+
           {/* Department Filter Tabs */}
           {departments.length > 1 && (
             <div className="space-y-2">
