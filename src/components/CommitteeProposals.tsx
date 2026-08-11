@@ -313,7 +313,7 @@ export default function CommitteeProposals() {
                         <div className="bg-white p-5 rounded-2xl border border-slate-200 space-y-2 shadow-inner">
                           <h5 className="text-xs font-black text-[#1E3A8A] uppercase tracking-wider flex items-center gap-1.5">
                             <Lightbulb className="h-4 w-4 text-amber-500" />
-                            구민 정책제안 전문 (3,000자 이상 원본)
+                            구민 정책제안 내용
                           </h5>
                           <div className="text-xs sm:text-sm text-slate-700 leading-relaxed whitespace-pre-wrap font-normal">
                             {item.detail}
