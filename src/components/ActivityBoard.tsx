@@ -108,10 +108,10 @@ export const mockData: BoardItem[] = [
   {
     id: 106,
     category: 'committee',
-    title: '📢 구민 정책제안&답변 전체 목록',
+    title: '📢 구민 정책제안&답변 목록 (1차 답변 대상)',
     date: '2026-08-11',
-    excerpt: '구민참여인수위원회 위원들의 정책제안 219건 전체 내용과 소관부서별 검토 및 답변 내용을 3,000자 원본 손실 없이 아코디언 및 부서별 필터로 확인하세요.',
-    badge: '전체 답변 목록',
+    excerpt: '구민참여인수위원회 위원들의 정책제안 중 소관부서 검토 및 1차 답변 작성이 완료된 제안 사항과 답변 내용을 확인하세요.',
+    badge: '1차 답변 목록',
     imageUrl: '/images/policy_proposals_thumbnail.png',
     linkUrl: '/committee/proposals-excel'
   },
