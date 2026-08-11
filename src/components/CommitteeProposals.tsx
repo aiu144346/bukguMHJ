@@ -27,9 +27,7 @@ interface Proposal {
   department?: string; // 소관부서
 }
 
-const initialProposalsData: Proposal[] = (excelProposalsData as Proposal[]).filter(
-  (p) => p.tag === '1차 답변 대상' || (p.answer && p.answer.trim().length > 0)
-);
+const initialProposalsData: Proposal[] = excelProposalsData as Proposal[];
 
 export default function CommitteeProposals() {
   const [proposals] = useState<Proposal[]>(initialProposalsData);
