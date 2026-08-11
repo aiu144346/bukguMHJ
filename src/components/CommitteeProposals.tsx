@@ -387,7 +387,7 @@ export default function CommitteeProposals() {
                             <Lightbulb className="h-4 w-4 text-amber-500" />
                             구민 정책제안 전문 (3,000자 이상 원본)
                           </h5>
-                          <div className="text-xs sm:text-sm text-slate-700 leading-relaxed whitespace-pre-wrap font-normal max-h-96 overflow-y-auto pr-2">
+                          <div className="text-xs sm:text-sm text-slate-700 leading-relaxed whitespace-pre-wrap font-normal">
                             {item.detail}
                           </div>
                         </div>
@@ -399,7 +399,7 @@ export default function CommitteeProposals() {
                             소관부서 공식 답변 사항 ({item.department || '담당부서'})
                           </h5>
                           {item.answer ? (
-                            <div className="text-xs sm:text-sm text-slate-800 leading-relaxed whitespace-pre-wrap font-medium max-h-96 overflow-y-auto pr-2">
+                            <div className="text-xs sm:text-sm text-slate-800 leading-relaxed whitespace-pre-wrap font-medium">
                               {item.answer}
                             </div>
                           ) : (
