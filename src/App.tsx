@@ -131,7 +131,7 @@ function App() {
             <PressDetail />
           ) : path === '/committee/qa' ? (
             <CommitteeQA />
-          ) : path === '/committee/proposals' ? (
+          ) : path === '/committee/proposals' || path === '/committee/proposals-excel' ? (
             <CommitteeProposals />
           ) : path === '/committee/proposals-part2' ? (
             <CommitteeProposalsPart2 />
