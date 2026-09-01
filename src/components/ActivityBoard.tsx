@@ -15,6 +15,16 @@ export interface BoardItem {
 
 export const mockData: BoardItem[] = [
   {
+    id: 107,
+    category: 'committee',
+    title: '부산광역시 북구 공약사업 구민 체감도 및 필요성 조사',
+    date: '2026-08-26',
+    excerpt: '안녕하십니까, 부산시 북구 주민 여러분. 본 조사는 부산광역시 북구가 추진 중인 주요 공약 사업에 대한 구민 여러분의 의견을 듣고, 향후 구정 운영 및 정책 수립에 반영하기 위해 실시되는 주민 체감도 및 우선 추진 필요성 조사입니다.',
+    badge: '구민 설문조사',
+    imageUrl: '/images/citizen-participation-notice-01.png',
+    linkUrl: '/committee/pledge-survey'
+  },
+  {
     id: 105,
     category: 'committee',
     title: '민선9기 부산 북구 구민참여인수위원회 「공감간담회」 개최 및 참석 수요조사 안내',
