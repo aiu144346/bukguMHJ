@@ -26,6 +26,8 @@ import NewsDay5Detail from './NewsDay5Detail';
 import NewsDay6Detail from './NewsDay6Detail';
 import CommitteeQA from './CommitteeQA';
 import CommitteeProposals from './CommitteeProposals';
+import CommitteeProposalsPhase2 from './CommitteeProposalsPhase2';
+import CommitteeProposalsPhase3 from './CommitteeProposalsPhase3';
 import CommitteeProposalsPart2 from './CommitteeProposalsPart2';
 import CommitteeProposalsPart3 from './CommitteeProposalsPart3';
 import CommitteeProposalsPart4 from './CommitteeProposalsPart4';
@@ -70,6 +72,12 @@ export default function MobileAppLayout() {
     } else if (path === '/committee/proposals' || path === '/committee/proposals-excel') {
       setActiveTab('news');
       setSelectedItemId(106); // mockData ID for committee-proposals-excel
+    } else if (path === '/committee/proposals-phase2' || path === '/committee/proposals-2nd') {
+      setActiveTab('news');
+      setSelectedItemId(108); // mockData ID for committee-proposals-phase2
+    } else if (path === '/committee/proposals-phase3' || path === '/committee/proposals-3rd') {
+      setActiveTab('news');
+      setSelectedItemId(109); // mockData ID for committee-proposals-phase3
     } else if (path === '/committee/proposals-part2') {
       setActiveTab('news');
       setSelectedItemId(102); // mockData ID for committee-proposals-part2
@@ -113,6 +121,10 @@ export default function MobileAppLayout() {
         setSelectedItemId(101);
       } else if (path === '/committee/proposals' || path === '/committee/proposals-excel') {
         setSelectedItemId(106);
+      } else if (path === '/committee/proposals-phase2' || path === '/committee/proposals-2nd') {
+        setSelectedItemId(108);
+      } else if (path === '/committee/proposals-phase3' || path === '/committee/proposals-3rd') {
+        setSelectedItemId(109);
       } else if (path === '/committee/proposals-part2') {
         setSelectedItemId(102);
       } else if (path === '/committee/proposals-part3') {
@@ -678,6 +690,10 @@ export default function MobileAppLayout() {
                 <CommitteeQA />
               ) : selectedItem.linkUrl === '/committee/proposals' || selectedItem.linkUrl === '/committee/proposals-excel' ? (
                 <CommitteeProposals />
+              ) : selectedItem.linkUrl === '/committee/proposals-phase2' || selectedItem.linkUrl === '/committee/proposals-2nd' ? (
+                <CommitteeProposalsPhase2 />
+              ) : selectedItem.linkUrl === '/committee/proposals-phase3' || selectedItem.linkUrl === '/committee/proposals-3rd' ? (
+                <CommitteeProposalsPhase3 />
               ) : selectedItem.linkUrl === '/committee/proposals-part2' ? (
                 <CommitteeProposalsPart2 />
               ) : selectedItem.linkUrl === '/committee/proposals-part3' ? (

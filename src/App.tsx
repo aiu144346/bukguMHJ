@@ -16,6 +16,8 @@ import NewsDay5Detail from './components/NewsDay5Detail';
 import NewsDay6Detail from './components/NewsDay6Detail';
 import CommitteeQA from './components/CommitteeQA';
 import CommitteeProposals from './components/CommitteeProposals';
+import CommitteeProposalsPhase2 from './components/CommitteeProposalsPhase2';
+import CommitteeProposalsPhase3 from './components/CommitteeProposalsPhase3';
 import CommitteeProposalsPart2 from './components/CommitteeProposalsPart2';
 import CommitteeProposalsPart3 from './components/CommitteeProposalsPart3';
 import CommitteeProposalsPart4 from './components/CommitteeProposalsPart4';
@@ -134,6 +136,10 @@ function App() {
             <CommitteeQA />
           ) : path === '/committee/proposals' || path === '/committee/proposals-excel' ? (
             <CommitteeProposals />
+          ) : path === '/committee/proposals-phase2' || path === '/committee/proposals-2nd' ? (
+            <CommitteeProposalsPhase2 />
+          ) : path === '/committee/proposals-phase3' || path === '/committee/proposals-3rd' ? (
+            <CommitteeProposalsPhase3 />
           ) : path === '/committee/proposals-part2' ? (
             <CommitteeProposalsPart2 />
           ) : path === '/committee/proposals-part3' ? (
