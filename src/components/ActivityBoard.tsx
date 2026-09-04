@@ -15,14 +15,24 @@ export interface BoardItem {
 
 export const mockData: BoardItem[] = [
   {
-    id: 109,
+    id: 110,
     category: 'committee',
-    title: '📢 구민 정책제안 소관부서 3차 답변 (답변제외대상 검토) 목록',
-    date: '2026-09-03',
-    excerpt: '구민참여인수위원회 위원들의 정책제안 중 소관부서 3차 검토결과 답변제외·추가검토 대상(총 137건)의 처리 내역을 확인하세요.',
+    title: '📢 구민 정책제안 소관부서 3차 답변 목록',
+    date: '2026-09-04',
+    excerpt: '구민참여인수위원회 위원들의 정책제안에 대한 소관부서 3차 면밀 검토 및 공식 추진 답변 사항(총 22건)을 확인하세요.',
     badge: '3차 답변 목록',
     imageUrl: '/images/proposals_phase3_thumbnail.png',
     linkUrl: '/committee/proposals-phase3'
+  },
+  {
+    id: 109,
+    category: 'committee',
+    title: '📢 구민 정책제안 3차 답변 (답변제외대상 검토) 목록',
+    date: '2026-09-03',
+    excerpt: '구민참여인수위원회 위원들의 정책제안 중 소관부서 3차 검토결과 답변제외·추가검토 대상(총 137건)의 처리 내역을 확인하세요.',
+    badge: '3차 답변(제외/생략)',
+    imageUrl: '/images/proposals_part3_thumbnail.png',
+    linkUrl: '/committee/proposals-phase3-excluded'
   },
   {
     id: 108,

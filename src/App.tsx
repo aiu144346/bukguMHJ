@@ -18,6 +18,7 @@ import CommitteeQA from './components/CommitteeQA';
 import CommitteeProposals from './components/CommitteeProposals';
 import CommitteeProposalsPhase2 from './components/CommitteeProposalsPhase2';
 import CommitteeProposalsPhase3 from './components/CommitteeProposalsPhase3';
+import CommitteeProposalsPhase3Excluded from './components/CommitteeProposalsPhase3Excluded';
 import CommitteeProposalsPart2 from './components/CommitteeProposalsPart2';
 import CommitteeProposalsPart3 from './components/CommitteeProposalsPart3';
 import CommitteeProposalsPart4 from './components/CommitteeProposalsPart4';
@@ -140,6 +141,8 @@ function App() {
             <CommitteeProposalsPhase2 />
           ) : path === '/committee/proposals-phase3' || path === '/committee/proposals-3rd' ? (
             <CommitteeProposalsPhase3 />
+          ) : path === '/committee/proposals-phase3-excluded' || path === '/committee/proposals-3rd-excluded' ? (
+            <CommitteeProposalsPhase3Excluded />
           ) : path === '/committee/proposals-part2' ? (
             <CommitteeProposalsPart2 />
           ) : path === '/committee/proposals-part3' ? (

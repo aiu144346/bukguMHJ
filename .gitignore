@@ -32,3 +32,4 @@ firebase.json
 
 .vercel
 .env*
+~$*.xlsx
