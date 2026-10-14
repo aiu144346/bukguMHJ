@@ -23,7 +23,6 @@ import CommitteeProposalsPart2 from './components/CommitteeProposalsPart2';
 import CommitteeProposalsPart3 from './components/CommitteeProposalsPart3';
 import CommitteeProposalsPart4 from './components/CommitteeProposalsPart4';
 import SympathyMeetingDetail from './components/SympathyMeetingDetail';
-import SympathyMeetingPopup from './components/SympathyMeetingPopup';
 import CitizenSurveyDetail from './components/CitizenSurveyDetail';
 
 
@@ -173,9 +172,6 @@ function App() {
 
       {/* Footer Details */}
       <Footer />
-
-      {/* Sympathy Meeting attendance survey popup modal */}
-      {path === '/' && <SympathyMeetingPopup />}
     </div>
   );
 }

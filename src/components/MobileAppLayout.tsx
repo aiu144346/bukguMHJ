@@ -32,7 +32,6 @@ import CommitteeProposalsPart2 from './CommitteeProposalsPart2';
 import CommitteeProposalsPart3 from './CommitteeProposalsPart3';
 import CommitteeProposalsPart4 from './CommitteeProposalsPart4';
 import SympathyMeetingDetail from './SympathyMeetingDetail';
-import SympathyMeetingPopup from './SympathyMeetingPopup';
 import CitizenSurveyDetail from './CitizenSurveyDetail';
 
 
@@ -219,15 +218,6 @@ export default function MobileAppLayout() {
           >
             정책제안&답변
           </button>
-          <a 
-            href="https://forms.gle/QMTcmjm9YZscTMav6"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-xs bg-[#1E3A8A] text-white px-3 py-1.5 rounded-lg font-bold flex items-center gap-1 shadow-sm shadow-blue-900/10 active:scale-95 transition-all"
-          >
-            <ClipboardCheck className="h-3.5 w-3.5" />
-            신청하기
-          </a>
         </div>
       </header>
 
@@ -236,8 +226,6 @@ export default function MobileAppLayout() {
         {/* TAB 1: HOME */}
         {activeTab === 'home' && (
           <div className="space-y-5 px-4 py-4">
-            {/* Sympathy Meeting attendance survey popup modal */}
-            {selectedItemId === null && <SympathyMeetingPopup />}
 
             {/* Notice Rolling Ticker */}
             <div className="bg-[#1E3A8A] text-white py-2 px-3 rounded-xl flex items-center gap-2.5 shadow-sm">

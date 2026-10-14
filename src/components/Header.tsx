@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import type { MouseEvent } from 'react';
-import { Menu, X, ClipboardCheck } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -130,15 +130,6 @@ export default function Header() {
           >
             <span>정책제안&답변</span>
           </button>
-          <a
-            href="https://forms.gle/QMTcmjm9YZscTMav6"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="ml-3 flex items-center gap-2 rounded-xl bg-[#1E3A8A] text-white px-5 py-3 text-base font-extrabold transition-all duration-300 min-h-[44px] shadow-lg shadow-blue-900/10 hover:bg-[#152a64] hover:shadow-xl hover:shadow-blue-900/20 active:scale-98 animate-soft-pulse"
-          >
-            <ClipboardCheck className="h-4.5 w-4.5" />
-            정책제안 신청
-          </a>
         </nav>
 
         {/* Mobile Hamburger Button */}
@@ -195,17 +186,6 @@ export default function Header() {
               {item.label}
             </a>
           ))}
-          <div className="pt-6 border-t border-slate-100 mt-4">
-            <a
-              href="https://forms.gle/QMTcmjm9YZscTMav6"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#1E3A8A] text-white py-4 text-base font-extrabold transition-all shadow-lg shadow-blue-900/10 hover:bg-[#152a64] min-h-[48px] animate-soft-pulse"
-            >
-              <ClipboardCheck className="h-5 w-5" />
-              정책제안 신청
-            </a>
-          </div>
         </div>
       </div>
     </header>
