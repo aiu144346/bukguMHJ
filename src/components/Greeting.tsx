@@ -155,12 +155,9 @@ export default function Greeting() {
                       span: "sm:col-span-2 lg:col-span-1"
                     }
                   ].map((item) => (
-                    <a
+                    <div
                       key={item.num}
-                      href="https://forms.gle/QMTcmjm9YZscTMav6"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`block rounded-2xl border p-4 transition-all duration-300 hover:shadow-md hover:-translate-y-0.5 cursor-pointer ${item.color} ${item.span || ''}`}
+                      className={`block rounded-2xl border p-4 transition-all duration-300 shadow-xs ${item.color} ${item.span || ''}`}
                     >
                       <div className="flex items-center gap-2 mb-2">
                         <span className="flex h-5 w-5 items-center justify-center rounded-full bg-slate-900 text-white font-extrabold text-[10px]">
@@ -173,7 +170,7 @@ export default function Greeting() {
                           <li key={idx} className="truncate">{b}</li>
                         ))}
                       </ul>
-                    </a>
+                    </div>
                   ))}
                 </div>
               </div>

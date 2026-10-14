@@ -179,7 +179,7 @@ export default function MobileAppLayout() {
   // Announcement Rolling Ticker state
   const [noticeIndex, setNoticeIndex] = useState(0);
   const notices = [
-    "부산 북구의 도약을 위해 구민 정책 제안을 상시 접수합니다.",
+    "구민 정책 제안 접수가 성황리에 마감되었습니다. 참여해주신 모든 분들께 감사드립니다.",
     "전국 최초! '구민참여인수위원회' 주민 모집을 실시합니다.",
     "인수위원회 현판 제막식 진행 및 부서별 실무보고 본격 개시!"
   ];
@@ -264,20 +264,18 @@ export default function MobileAppLayout() {
 
             {/* Quick Actions Grid */}
             <div className="grid grid-cols-2 gap-3.5">
-              <a 
-                href="https://forms.gle/QMTcmjm9YZscTMav6"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-white border border-slate-100 p-4 rounded-2xl flex flex-col justify-between shadow-sm active:scale-98 transition"
+              <div 
+                onClick={() => openItemDetails(106)}
+                className="bg-white border border-slate-100 p-4 rounded-2xl flex flex-col justify-between shadow-sm active:scale-98 transition cursor-pointer"
               >
                 <div className="h-9 w-9 bg-blue-50 rounded-xl flex items-center justify-center text-[#1E3A8A]">
                   <ClipboardCheck className="h-5 w-5" />
                 </div>
                 <div className="mt-4">
-                  <span className="block text-xs text-slate-400 font-bold">인수위 동참</span>
-                  <span className="block text-sm font-black text-slate-800 mt-0.5">구민참여단 신청</span>
+                  <span className="block text-xs text-slate-400 font-bold">인수위 제안</span>
+                  <span className="block text-sm font-black text-slate-800 mt-0.5">정책제안&답변</span>
                 </div>
-              </a>
+              </div>
               <button 
                 onClick={() => setActiveTab('map')}
                 className="bg-white border border-slate-100 p-4 rounded-2xl flex flex-col justify-between shadow-sm active:scale-98 transition text-left"

@@ -29,7 +29,7 @@ import CitizenSurveyDetail from './components/CitizenSurveyDetail';
 function VerticalTicker() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const notices = [
-    "부산 북구의 도약을 위해 구민 정책 제안을 상시 접수하고 있습니다.",
+    "구민 정책 제안 접수가 성황리에 마감되었습니다. 참여해주신 모든 분들께 감사드립니다.",
     "전국 최초! '구민참여인수위원회'를 구성하여 주민 중심 구정을 실현합니다.",
     "인수위원회 공식 제막식 진행 및 분과별 업무보고 본격 가동!"
   ];
